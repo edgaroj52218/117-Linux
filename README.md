@@ -4,7 +4,7 @@
 
 ## Why use Linux?
 
-## Top 10 Linux commands
+### Top 10 Linux commands with Examples
 
 | Command                         | Description                                                   | Example Usage                      |
 |---------------------------------|---------------------------------------------------------------|------------------------------------|
@@ -18,4 +18,20 @@
 | `touch <file>`                  | Create an empty file named `<file>` or update its timestamp. | `touch newfile.txt`               |
 | `man <command>`                 | Display the manual page for a specific command.              | `man ls`                           |
 | `chmod <permissions> <file>`    | Change the permissions of a file or directory. Use numerical or symbolic notation. | `chmod 755 script.sh`             |
+
+
+### Top 10 GIT Commands with Examples
+| Command                         | Description                                                   | Example Usage                      |
+|----------------------------------|---------------------------------------------------------------|------------------------------------|
+| `git init`                      | Initialize a new Git repository in the current directory.     | `git init`                        |
+| `git clone <url>`               | Clone a remote repository to your local machine.              | `git clone git@github.com:user/repo.git` |
+| `git status`                    | Show the current status of your working directory and staging area. | `git status`                |
+| `git add <file>`                | Add changes in `<file>` to the staging area.                  | `git add README.md`               |
+| `git commit -m "<message>"`      | Commit staged changes with a descriptive message.             | `git commit -m "Initial commit"`  |
+| `git branch`                    | List all branches and highlight the current one.              | `git branch`                      |
+| `git checkout <branch>`         | Switch to a specific branch or commit.                        | `git checkout main`               |
+| `git merge <branch>`            | Merge changes from `<branch>` into the current branch.        | `git merge part1`                 |
+| `git pull`                      | Fetch and integrate changes from the remote repository.       | `git pull origin main`            |
+| `git push`                      | Push your committed changes to the remote repository.         | `git push origin part2`           |
+
 
