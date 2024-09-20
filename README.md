@@ -36,3 +36,35 @@
 * Gained popularity in the Mid-90s, and in the 2000s became widely used in servers, embedded systems, supercomputers, etc.
 * Today it powers a large part of the internet, smartphones through Android, and enterprise infrastructure.
 * Linux is a key OS that every programmer should know how to use.
+
+## Common Linux Errors and Fixes
+
+| Error                         | Description                                             | How to Fix                                                 |
+|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|
+| `Permission denied`            | You don't have the necessary permissions to run a command or access a file. | Use `sudo` before the command, or adjust file permissions with `chmod`. |
+| `Command not found`            | The command you typed is not recognized.                | Make sure the command is installed, or check for typos. You may need to install it using `apt` or `yum`. |
+| `No space left on device`      | Your disk is full.                                      | Clear unnecessary files or increase disk space. Use `du` to find large files. |
+| `File not found`               | The file you're trying to access doesn't exist or the path is incorrect. | Check the file path and spelling, or create the file if needed. |
+| `Segmentation fault (core dumped)` | A program tried to access restricted memory.             | Check for bugs in the program, reinstall, or update the program. |
+| `E: Unable to locate package`  | A package is missing from the repository.               | Run `sudo apt update` to refresh the package list, or ensure the package name is correct. |
+| `Device or resource busy`      | The system is trying to access a file or resource that's currently in use. | Use `lsof` or `fuser` to find the process using the resource and stop it if necessary. |
+| `Too many open files`          | The system has reached the maximum number of file descriptors. | Increase the limit with `ulimit -n`, or close unused files and processes. |
+| `Connection refused`           | A service you're trying to access is not running or the port is blocked. | Check if the service is running with `systemctl`, and ensure firewall rules allow traffic on the port. |
+| `Broken pipe`                  | A process tried to send data to another process that has terminated. | Restart the processes, or check if the receiving process is still running. |
+
+## Common Git Errors and Fixes
+
+| Error                                  | Description                                                       | How to Fix                                                   |
+|----------------------------------------|-------------------------------------------------------------------|--------------------------------------------------------------|
+| `fatal: not a git repository`          | You're trying to run a Git command outside a Git repository.       | Navigate to the correct directory or initialize a repository with `git init`. |
+| `error: failed to push some refs`      | A push was rejected because the local branch is behind the remote. | Fetch and merge changes from the remote using `git pull`, then try pushing again. |
+| `merge conflict`                       | Changes in the same file conflict during a merge.                  | Manually resolve the conflicts in the affected files, then stage them with `git add` and continue the merge with `git commit`. |
+| `fatal: Authentication failed`         | Git failed to authenticate with the remote repository.             | Check your credentials or SSH key configuration, or ensure you have the right permissions. |
+| `detached HEAD`                        | You're not on a branch but on a specific commit.                   | Create or switch to a branch using `git checkout` or `git switch`, then commit your changes. |
+| `error: Your local changes... would be overwritten by merge` | Local changes are preventing a pull or merge.                      | Either commit or stash your local changes with `git stash`, then try the pull/merge again. |
+| `fatal: remote origin already exists`  | You're trying to add a remote that already exists.                 | Remove the existing remote with `git remote rm origin`, then add it again. |
+| `warning: LF will be replaced by CRLF` | Line endings differ between systems (Linux vs Windows).            | Configure Git to use the correct line endings using `git config core.autocrlf true` or `false`. |
+| `error: cannot lock ref`               | Another Git process is running or a lock file wasn't cleaned up.   | Close the other process or delete the lock file (`.git/refs/heads/branch.lock`). |
+| `fatal: unable to access '...': Could not resolve host` | Git cannot reach the remote repository.                            | Check your internet connection or the remote URL with `git remote -v`, and ensure it’s correct. |
+
+
