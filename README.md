@@ -1,9 +1,5 @@
 # Command Line Survival Guide for GIT and Linux
 
-## Who invented GIT and Linux?
-
-## Why use Linux?
-
 ### Top 10 Linux commands with Examples
 
 | Command                         | Description                                                   | Example Usage                      |
@@ -20,7 +16,7 @@
 | `chmod <permissions> <file>`    | Change the permissions of a file or directory. Use numerical or symbolic notation. | `chmod 755 script.sh`             |
 
 
-### Top 10 GIT Commands with Examples
+### Top 10 Git Commands with Examples
 | Command                         | Description                                                   | Example Usage                      |
 |----------------------------------|---------------------------------------------------------------|------------------------------------|
 | `git init`                      | Initialize a new Git repository in the current directory.     | `git init`                        |
@@ -34,4 +30,9 @@
 | `git pull`                      | Fetch and integrate changes from the remote repository.       | `git pull origin main`            |
 | `git push`                      | Push your committed changes to the remote repository.         | `git push origin part2`           |
 
-
+## History of Linux
+* Developed by Linus Torvalds as a free, open-source operating system and released in 1991.
+* In 1992, Linux was licensed under the GNU GPL (General Public License), making it free to distribute and modify
+* Gained popularity in the Mid-90s, and in the 2000s became widely used in servers, embedded systems, supercomputers, etc.
+* Today it powers a large part of the internet, smartphones through Android, and enterprise infrastructure.
+* Linux is a key OS that every programmer should know how to use.
