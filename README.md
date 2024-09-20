@@ -1,6 +1,6 @@
 # Command Line Survival Guide for GIT and Linux (By Edgar Ojeda)
 
-## Brief History of Linux                                                   
+## Brief History of Linux
 * Developed by Linus Torvalds as a free, open-source operating system and released in 1991.
 * In 1992, Linux was licensed under the GNU GPL (General Public License), making it free to distribute and modify
 * Gained popularity in the Mid-90s, and in the 2000s became widely used in servers, embedded systems, supercomputers, etc.
