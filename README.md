@@ -36,3 +36,19 @@
 * Gained popularity in the Mid-90s, and in the 2000s became widely used in servers, embedded systems, supercomputers, etc.
 * Today it powers a large part of the internet, smartphones through Android, and enterprise infrastructure.
 * Linux is a key OS that every programmer should know how to use.
+
+## Common Linux Errors and Fixes
+
+| Error                         | Description                                             | How to Fix                                                 |
+|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|
+| `Permission denied`            | You don't have the necessary permissions to run a command or access a file. | Use `sudo` before the command, or adjust file permissions with `chmod`. |
+| `Command not found`            | The command you typed is not recognized.                | Make sure the command is installed, or check for typos. You may need to install it using `apt` or `yum`. |
+| `No space left on device`      | Your disk is full.                                      | Clear unnecessary files or increase disk space. Use `du` to find large files. |
+| `File not found`               | The file you're trying to access doesn't exist or the path is incorrect. | Check the file path and spelling, or create the file if needed. |
+| `Segmentation fault (core dumped)` | A program tried to access restricted memory.             | Check for bugs in the program, reinstall, or update the program. |
+| `E: Unable to locate package`  | A package is missing from the repository.               | Run `sudo apt update` to refresh the package list, or ensure the package name is correct. |
+| `Device or resource busy`      | The system is trying to access a file or resource that's currently in use. | Use `lsof` or `fuser` to find the process using the resource and stop it if necessary. |
+| `Too many open files`          | The system has reached the maximum number of file descriptors. | Increase the limit with `ulimit -n`, or close unused files and processes. |
+| `Connection refused`           | A service you're trying to access is not running or the port is blocked. | Check if the service is running with `systemctl`, and ensure firewall rules allow traffic on the port. |
+| `Broken pipe`                  | A process tried to send data to another process that has terminated. | Restart the processes, or check if the receiving process is still running. |
+
