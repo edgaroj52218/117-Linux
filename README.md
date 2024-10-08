@@ -12,7 +12,7 @@
 * [Common Git Commands, Erros, and Fixes](git.md)
 
 ## History of the Internet
-* [Pre-Internet](docs/preinternet.html)
-* [Internet](docs/internet.html)
-* [Web 1.0](docs/web1.html)
-* [Web 2.0](docs/web2.html)
+* [Pre-Internet](docs/preinternet.md)
+* [Internet](docs/internet.md)
+* [Web 1.0](docs/web1.md)
+* [Web 2.0](docs/web2.md)
