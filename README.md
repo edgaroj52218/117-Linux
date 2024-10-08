@@ -9,3 +9,9 @@
 
 [Common Linux Commands, Errors, and Fixes](linux.md)
 [Common Git Commands, Erros, and Fixes](git.md)
+
+History of Internet
+1. Pre-Internet
+- JC Licklider
+- Nuclear Weapons
+- ARPA (Advanced Research)
