@@ -7,9 +7,11 @@
 * Today it powers a large part of the internet, smartphones through Android, and enterprise infrastructure.
 * Linux is a key OS that every programmer should know how to use.
 
-## History of the Internet
+
 * [Common Linux Commands, Errors, and Fixes](linux.md)
 * [Common Git Commands, Erros, and Fixes](git.md)
+
+## History of the Internet
 * [Pre-Internet](docs/preinternet.html)
 * [Internet](docs/internet.html)
 * [Web 1.0](docs/web1.html)
