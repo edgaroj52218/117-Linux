@@ -10,7 +10,7 @@
 ## History of the Internet
 * [Common Linux Commands, Errors, and Fixes](linux.md)
 * [Common Git Commands, Erros, and Fixes](git.md)
-* [Pre-Internet](preinternet.html)
-* [Internet](internet.html)
-* [Web 1.0](web1.html)
-* [Web 2.0](web2.html)
+* [Pre-Internet](docs/preinternet.html)
+* [Internet](docs/internet.html)
+* [Web 1.0](docs/web1.html)
+* [Web 2.0](docs/web2.html)
