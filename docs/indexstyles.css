@@ -1,106 +1,176 @@
-/* General body styling */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 50px 20px 20px; /* Add padding-top to move content below the hamburger */
-    background-color: #f4f4f4;
-    overflow-x: hidden;
-  }
-  
-  /* Hamburger menu styling */
-  .hamburger {
-    position: fixed; /* Fix position to the top left */
-    top: 10px;
-    left: 10px;
-    display: inline-block;
-    cursor: pointer;
-    z-index: 10;
-  }
-  
-  .hamburger div {
-    width: 35px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
-  }
-  
-  /* Menu container */
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Top Section (Navigation) */
+.top-section {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #1f2937;
+  color: #fff;
+  z-index: 3;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+}
+
+/* Slide-out Menu */
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #60a5fa; /* Light blue hover effect */
+}
+
+/* Overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+/* Main Content */
+main {
+  margin-top: 80px; /* Offset for fixed header */
+  width: 80%;
+  max-width: 900px;
+  padding: 40px 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #1f2937;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+ul li {
+  margin: 12px 0;
+}
+
+ul li a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+ul li a:hover {
+  border-bottom: 2px solid #2563eb; /* Blue underline on hover */
+}
+
+/* Section Styling */
+section#history {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 2px solid #e5e7eb;
+}
+
+section h1 {
+  color: #111827;
+  font-size: 1.75rem;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+  background-color: #1f2937;
+  color: #fff;
+  margin-top: 50px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #2563eb;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .menu {
-    position: fixed;
-    right: -300px; /* Hidden off-screen initially */
-    top: 0;
-    width: 250px;
-    height: 100%;
-    background-color: #333;
-    padding-top: 60px;
-    transition: 0.5s;
-    z-index: 9;
-  }
-  
-  /* Menu items styling */
-  .menu a {
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 22px;
-    color: white;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .menu a:hover {
-    background-color: #575757;
-  }
-  
-  /* Slide-in and out transition for menu */
-  .menu.open {
-    right: 0;
-  }
-  
-  /* Overlay to darken the screen when menu is open */
-  .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
+    flex-direction: column;
+    align-items: center;
+    display: none; /* Hide by default */
+    background-color: #1f2937;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 8;
-  }
-  
-  .overlay.show {
-    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 4;
   }
 
-  /* Contact section styling */
-#contact {
+  .menu.active {
+    display: flex;
+  }
+
+  main {
+    width: 90%;
+    margin-top: 100px; /* Adjust margin for mobile */
+  }
+
+  .footer {
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
   }
-  
-  #contact h2 {
-    color: #333;
-  }
-  
-  #contact input, #contact textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  #contact input[type="submit"] {
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  #contact input[type="submit"]:hover {
-    background-color: #575757;
-  }
-  
+}
