@@ -4,34 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Survival Guide for Linux and GIT</title>
   <link rel="stylesheet" href="indexstyles.css">
 </head>
 
 <body>
-  <!-- Top Section (Z-pattern starts here) -->
+  <!-- Header with Hamburger Menu -->
   <header class="top-section">
-    <!-- Hamburger Menu Icon -->
-    <div class="hamburger">
+    <div class="hamburger" id="hamburger">
       <div></div>
       <div></div>
       <div></div>
     </div>
-
-    <!-- Slide-out Menu -->
-    <nav class="menu">
-      <a href="index.html">Home</a>
-      <a href="contact.html">Contact</a>
-      <a href="#info">Info</a>
-      <a href="#more">More</a>
-    </nav>
   </header>
 
-  <!-- Overlay for darkening the background when the menu is open -->
-  <div class="overlay"></div>
+  <!-- Slide-out Menu -->
+  <nav class="menu" id="menu">
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact</a>
+    <a href="#info">Info</a>
+    <a href="#more">More</a>
+  </nav>
 
-  <!-- Middle Content Section -->
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Main Content -->
   <main>
     <h1>Common Linux Commands, Errors, and Fixes</h1>
     <ul>
@@ -39,26 +37,24 @@
       <li><a href="git.html">Common Git Commands, Errors, and Fixes</a></li>
     </ul>
 
-    <!-- Additional Content Section -->
     <section id="history">
       <h1>History of the Internet</h1>
       <ul>
-        <li><a href="preinternet.html">1. Pre-Internet</a></li>
-        <li><a href="internet.html">2. Internet</a></li>
-        <li><a href="web1.html">3. Web 1.0</a></li>
-        <li><a href="web2.html">4. Web 2.0</a></li>
-        <li><a href="webaccessibility.html">5. Web Accessibility & Standards</a></li>
-        <li><a href="futureofinternet.html">6. Future of the Internet</a></li>
+        <li><a href="preinternet.html">Pre-Internet</a></li>
+        <li><a href="internet.html">Internet</a></li>
+        <li><a href="web1.html">Web 1.0</a></li>
+        <li><a href="web2.html">Web 2.0</a></li>
+        <li><a href="webaccessibility.html">Web Accessibility & Standards</a></li>
+        <li><a href="futureofinternet.html">Future of the Internet</a></li>
       </ul>
     </section>
   </main>
 
-  <!-- Bottom CTA (End of Z-pattern) -->
   <footer class="footer">
     <a href="contact.html" class="cta-button">Get in Touch</a>
   </footer>
 
   <script src="index.js"></script>
-  
 </body>
+
 </html>

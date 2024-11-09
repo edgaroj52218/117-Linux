@@ -9,11 +9,7 @@ body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   background-color: #f4f4f9;
   color: #333;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+  line-height: 1.6;
 }
 
 /* Top Section (Navigation) */
@@ -25,11 +21,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background-color: #1f2937;
+  background-color: #1f2937; /* Dark background for authority */
   color: #fff;
-  z-index: 3;
+  z-index: 1000;
 }
 
+/* Hamburger Menu Icon */
 .hamburger {
   cursor: pointer;
   display: flex;
@@ -41,17 +38,47 @@ body {
   width: 25px;
   height: 3px;
   background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Transform hamburger to 'X' when active */
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* Slide-out Menu */
 .menu {
+  position: fixed;
+  right: -300px; /* Hidden by default */
+  top: 0;
+  height: 100%;
+  width: 300px;
+  background-color: #1f2937;
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  gap: 20px;
+  transition: right 0.3s ease;
+  z-index: 1001;
+}
+
+.menu.active {
+  right: 0; /* Slide in from the right */
 }
 
 .menu a {
   color: #fff;
   text-decoration: none;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
@@ -68,37 +95,48 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 2;
+  z-index: 999;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+  display: block;
 }
 
 /* Main Content */
 main {
   margin-top: 80px; /* Offset for fixed header */
-  width: 80%;
-  max-width: 900px;
+  width: 90%;
+  max-width: 1200px;
   padding: 40px 20px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-h1 {
+/* Z-pattern Layout */
+main h1 {
+  width: 100%;
   color: #1f2937;
   margin-bottom: 20px;
   font-size: 2rem;
 }
 
-ul {
+main ul {
   list-style-type: none;
   padding: 0;
   margin-bottom: 30px;
+  width: 48%;
 }
 
-ul li {
+main ul li {
   margin: 12px 0;
 }
 
-ul li a {
+main ul li a {
   color: #2563eb;
   text-decoration: none;
   font-weight: 500;
@@ -106,26 +144,47 @@ ul li a {
   transition: border-bottom 0.3s ease;
 }
 
-ul li a:hover {
-  border-bottom: 2px solid #2563eb; /* Blue underline on hover */
+main ul li a:hover {
+  border-bottom: 2px solid #2563eb;
 }
 
-/* Section Styling */
+/* History Section */
 section#history {
+  width: 100%;
   margin-top: 50px;
   padding-top: 20px;
   border-top: 2px solid #e5e7eb;
 }
 
-section h1 {
+section#history h1 {
   color: #111827;
   font-size: 1.75rem;
+  margin-bottom: 20px;
+}
+
+section#history ul {
+  list-style-type: none;
+}
+
+section#history ul li p {
+  margin: 8px 0;
+}
+
+section#history ul li a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+section#history ul li a:hover {
+  color: #1e40af;
 }
 
 /* Footer */
 .footer {
   width: 100%;
-  padding: 30px;
+  padding: 30px 20px;
   text-align: center;
   background-color: #1f2937;
   color: #fff;
@@ -148,29 +207,29 @@ section h1 {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  main ul {
+    width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .menu {
-    flex-direction: column;
-    align-items: center;
-    display: none; /* Hide by default */
-    background-color: #1f2937;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    z-index: 4;
+    width: 80%;
+    right: -80%;
   }
 
   .menu.active {
-    display: flex;
+    right: 0;
   }
 
   main {
-    width: 90%;
-    margin-top: 100px; /* Adjust margin for mobile */
+    width: 95%;
+    margin-top: 100px;
+    padding: 20px 10px;
   }
 
   .footer {
-    padding: 20px;
+    padding: 20px 10px;
   }
 }

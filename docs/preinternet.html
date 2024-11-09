@@ -4,91 +4,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Pre-Internet Era and the Influences of ARPA and Nuclear Weapons">
     <title>Pre-Internet</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
-    <header>
-        <h1>Pre-Internet</h1>
+    <!-- Header with Hamburger Menu -->
+    <header class="top-section">
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </header>
 
-    <section>
-        <h2>1.1 JC Licklider</h2>
-        <h3>Who</h3>
-        <p>Joseph Carl Robnett Licklider, commonly known as JC Licklider, was an American psychologist and computer scientist.</p>
+    <!-- Slide-out Menu -->
+    <nav class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="linux.html">Linux Commands</a>
+        <a href="git.html">Git Commands</a>
+        <a href="history.html">Internet History</a>
+    </nav>
+    <div class="overlay" id="overlay"></div>
 
-        <h3>What</h3>
-        <p>Licklider was a pioneer in computer science and played a key role in conceptualizing and developing early ideas that eventually led to the creation of the internet. He is best known for his vision of a globally connected network of computers, which he called the "Intergalactic Computer Network."</p>
+    <!-- Main Content (F-pattern Layout) -->
+    <main>
+        <!-- Top horizontal scan line -->
+        <h1>Pre-Internet</h1>
+        <p class="intro">Explore the origins of the internet, focusing on key figures and pivotal moments that led to the development of a globally connected network.</p>
 
-        <h3>Why</h3>
-        <p>He believed computers could enhance human capabilities, especially in communication and collaboration. His ideas laid the foundation for ARPANET, the precursor to the modern internet.</p>
+        <!-- Section 1: JC Licklider -->
+        <section class="content">
+            <h2>1.1 JC Licklider</h2>
+            <h3>Who</h3>
+            <p>Joseph Carl Robnett Licklider, commonly known as JC Licklider, was an American psychologist and computer scientist.</p>
 
-        <h3>When</h3>
-        <p>In the early 1960s, Licklider's work at ARPA (Advanced Research Projects Agency) greatly influenced the development of time-sharing systems and networked computing.</p>
+            <h3>What</h3>
+            <p>Licklider was a pioneer in computer science and conceptualized the "Intergalactic Computer Network," which laid the foundation for modern internet ideas.</p>
 
-        <h3>How</h3>
-        <p>Through his role at ARPA, Licklider funded and directed research projects focused on networking and time-sharing, bringing together scientists who would later create ARPANET.</p>
+            <h3>Why</h3>
+            <p>He envisioned computers enhancing human communication and collaboration. His ideas eventually shaped the creation of ARPANET, the precursor to the internet.</p>
 
-        <div class="example">
-            <h4>Example:</h4>
-            <p>Licklider's paper, "Man-Computer Symbiosis," outlined his vision of a future where humans and computers work together interactively.</p>
-        </div>
-    </section>
+            <h3>When</h3>
+            <p>In the early 1960s, while at ARPA, Licklider’s work significantly influenced networked computing and time-sharing systems.</p>
 
-    <section>
-        <h2>1.2 Nuclear Weapons</h2>
-        <h3>Who</h3>
-        <p>The development and stockpiling of nuclear weapons during the Cold War primarily involved global superpowers, including the United States and the Soviet Union.</p>
+            <h3>How</h3>
+            <p>Through his role at ARPA, he supported and funded projects focused on networking, enabling the eventual development of ARPANET.</p>
 
-        <h3>What</h3>
-        <p>The presence of nuclear weapons and the fear of their use were major factors behind the development of robust communication networks. The U.S. government sought a decentralized system that could survive a nuclear attack.</p>
+            <div class="example">
+                <h4>Example:</h4>
+                <p>Read Licklider's influential paper, "<a href="https://worrydream.com/refs/Licklider_1960_-_Man-Computer_Symbiosis.pdf" target="_blank">Man-Computer Symbiosis</a>," where he envisions human-computer interaction for collaborative work.</p>
+            </div>
+        </section>
 
-        <h3>Why</h3>
-        <p>The threat of nuclear war led to concerns about maintaining command and control over military communications in the event of widespread destruction. A decentralized network was seen as essential for communication continuity.</p>
+        <!-- Section 2: Nuclear Weapons -->
+        <section class="content">
+            <h2>1.2 Nuclear Weapons</h2>
+            <h3>Who</h3>
+            <p>During the Cold War, the U.S. and Soviet Union developed nuclear arsenals, influencing the need for secure communication.</p>
 
-        <h3>When</h3>
-        <p>In the 1960s, during the Cold War, the U.S. Department of Defense initiated efforts to create communication systems resilient enough to withstand nuclear attacks.</p>
+            <h3>What</h3>
+            <p>The presence and threat of nuclear weapons led to a push for a resilient, decentralized communication system to withstand nuclear attacks.</p>
 
-        <h3>How</h3>
-        <p>This led to the development of ARPANET, a network designed to reroute data through multiple paths if certain nodes were destroyed. ARPANET became the foundation of the modern internet.</p>
+            <h3>Why</h3>
+            <p>Maintaining communication and command control during nuclear strikes was essential, spurring innovation in network resilience.</p>
 
-        <div class="example">
-            <h4>Example:</h4>
-            <p>Packet-switching technology was a key innovation, allowing information to be transmitted via multiple routes, increasing the network’s survivability in the event of a nuclear attack.</p>
-        </div>
-    </section>
+            <h3>When</h3>
+            <p>In the 1960s, the U.S. Department of Defense prioritized creating systems capable of surviving catastrophic events.</p>
 
-    <section>
-        <h2>1.3 ARPA (Advanced Research Project Agency)</h2>
-        <h3>Who</h3>
-        <p>ARPA, later renamed DARPA (Defense Advanced Research Projects Agency), is a U.S. government agency created to fund research in defense-related technologies.</p>
+            <h3>How</h3>
+            <p>This led to the development of ARPANET, which used packet-switching to reroute data through multiple pathways, ensuring communication continuity.</p>
 
-        <h3>What</h3>
-        <p>ARPA played a pivotal role in the development of the early internet through the creation of ARPANET, the first packet-switching network that laid the foundation for the modern internet.</p>
+            <div class="example">
+                <h4>Example:</h4>
+                <p>Read about the impact of packet-switching technology on modern networks in "<a href="https://www.internetsociety.org/internet/history-internet/brief-history-internet" target="_blank">A Brief History of the Internet</a>" by the Internet Society.</p>
+            </div>
+        </section>
 
-        <h3>Why</h3>
-        <p>In response to the Soviet Union's technological advances, such as the launch of Sputnik, the U.S. government established ARPA in 1958 to ensure that the U.S. remained at the forefront of military and technological innovation.</p>
+        <!-- Section 3: ARPA -->
+        <section class="content">
+            <h2>1.3 ARPA (Advanced Research Project Agency)</h2>
+            <h3>Who</h3>
+            <p>ARPA, later known as DARPA, is a U.S. government agency focused on defense-related technological advancements.</p>
 
-        <h3>When</h3>
-        <p>Founded in 1958, ARPA’s influence on networking technology became clear in the 1960s with the development of ARPANET, which began in 1969.</p>
+            <h3>What</h3>
+            <p>ARPA was instrumental in creating ARPANET, the first packet-switching network and a precursor to the modern internet.</p>
 
-        <h3>How</h3>
-        <p>ARPA funded research in computer networking, specifically in packet-switching and time-sharing technologies. Through ARPANET, ARPA connected research institutions, allowing for data sharing, which ultimately evolved into the global internet.</p>
+            <h3>Why</h3>
+            <p>In response to the Soviet Union’s launch of Sputnik, ARPA was established to drive American innovation in technology and defense.</p>
 
-        <div class="example">
-            <h4>Example:</h4>
-            <p>ARPA funded the work of pioneers like Paul Baran and Lawrence Roberts, who designed ARPANET’s packet-switching framework, ensuring communication could continue even if parts of the network were destroyed.</p>
-        </div>
-    </section>
+            <h3>When</h3>
+            <p>Founded in 1958, ARPA’s involvement in networking technology became prominent in the 1960s with ARPANET's development starting in 1969.</p>
 
-    <footer>
-        <a href="index.html">Back to Homepage</a>
+            <h3>How</h3>
+            <p>Through extensive funding in networking research, ARPA connected research institutions, facilitating data sharing and ultimately evolving into the global internet.</p>
+
+            <div class="example">
+                <h4>Example:</h4>
+                <p>Learn more about ARPA’s contributions in "<a href="https://www.darpa.mil/about-us/timeline/arpanet" target="_blank">ARPANET and the Internet</a>" from the official DARPA timeline.</p>
+            </div>
+        </section>
+
+        <!-- Progress Tracker & Downloads -->
+        <section class="extras">
+            <h2>Track Your Progress</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Understand JC Licklider's role in internet history</li>
+                <li><input type="checkbox"> Learn about the impact of nuclear threats on network design</li>
+                <li><input type="checkbox"> Explore ARPA’s mission and contributions</li>
+            </ul>
+
+            <div class="resources">
+                <h3>Downloadable Resources</h3>
+                <a href="https://www.internetsociety.org/resources/doc/2017/brief-history-of-the-internet" class="download-link" target="_blank">Download "A Brief History of the Internet" (PDF)</a>
+            </div>
+        </section>
+
+        <!-- Social Proof -->
+        <section class="testimonials">
+            <h2>What Students Are Saying</h2>
+            <blockquote>
+                "This guide made it so easy to understand the complex history of the internet!" - Tech Enthusiast, 2024
+            </blockquote>
+        </section>
+    </main>
+
+    <!-- Footer with a link back to the homepage -->
+    <footer class="footer">
+        <a href="index.html" class="cta-button">Back to Homepage</a>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
