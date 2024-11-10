@@ -10,108 +10,110 @@
 </head>
 
 <body>
-
-    <header>
-        <h1>Web Accessibility & Standards</h1>
+    <!-- Header with Hamburger Menu -->
+    <header class="top-section">
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </header>
 
-    <section>
-        <h2>5.1 WAI (Web Accessibility Initiative)</h2>
-        <h3>Who</h3>
-        <p>The Web Accessibility Initiative (WAI) is led by the World Wide Web Consortium (W3C), which is the main international standards organization for the web.</p>
+    <!-- Slide-out Menu -->
+    <nav class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="linux.html">Linux Commands</a>
+        <a href="git.html">Git Commands</a>
+        <a href="history.html">Internet History</a>
+    </nav>
+    <div class="overlay" id="overlay"></div>
 
-        <h3>What</h3>
-        <p>WAI is an initiative to improve web accessibility for people with disabilities. It provides guidelines and technical specifications to ensure that websites are accessible to all users, regardless of disability.</p>
+    <!-- Main Content (F-pattern Layout) -->
+    <main>
+        <h1>Web Accessibility & Standards</h1>
+        <p class="intro">Learn how web accessibility initiatives and standards help ensure inclusivity for all users.</p>
 
-        <h3>Why</h3>
-        <p>With more people relying on the internet for information, services, and communication, it’s essential that websites are designed inclusively. WAI aims to break down barriers that prevent people with disabilities from accessing web content.</p>
+        <!-- Section 1: WAI (Web Accessibility Initiative) -->
+        <section class="content">
+            <h2>5.1 WAI (Web Accessibility Initiative)</h2>
+            <h3>Who</h3>
+            <p>Led by the W3C, the WAI works to improve web accessibility for people with disabilities.</p>
 
-        <h3>When</h3>
-        <p>WAI was established in 1997 as part of the W3C to address the growing need for accessible web standards.</p>
+            <h3>What</h3>
+            <p>WAI provides guidelines like the Web Content Accessibility Guidelines (WCAG) to ensure that websites are accessible. Explore the guidelines on the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank">W3C WAI Website</a>.</p>
 
-        <h3>How</h3>
-        <p>WAI produces several key guidelines, such as the Web Content Accessibility Guidelines (WCAG), which provide a framework for developing accessible web content. These guidelines are continually updated to reflect new technologies.</p>
+            <div class="example">
+                <h4>Example:</h4>
+                <p>Using <code>alt</code> attributes for images: <code>&lt;img src="example.jpg" alt="Description of the image"&gt;</code></p>
+            </div>
+        </section>
 
-        <div class="example">
-            <h4>Example:</h4>
-            <p>The WCAG guidelines emphasize providing text alternatives for non-text content, such as adding <code>alt</code> attributes to images:</p>
-            <code>&lt;img src="example.jpg" alt="Description of the image"&gt;</code>
-        </div>
-    </section>
+        <!-- Section 2: Section 508 (U.S.) -->
+        <section class="content">
+            <h2>5.2 Section 508 (U.S.)</h2>
+            <h3>What</h3>
+            <p>A U.S. law requiring federal websites to be accessible to all citizens. Learn more about Section 508 at the <a href="https://www.section508.gov/" target="_blank">Section 508 Official Site</a>.</p>
 
-    <section>
-        <h2>5.2 Section 508 (U.S.)</h2>
-        <h3>Who</h3>
-        <p>Section 508 is part of the U.S. Rehabilitation Act and is overseen by the U.S. federal government.</p>
+            <div class="example">
+                <h4>Example:</h4>
+                <p>Adding closed captions to a video: <code>&lt;video controls&gt;&lt;track src="captions.vtt" kind="captions" srclang="en" label="English"&gt;&lt;/video&gt;</code></p>
+            </div>
+        </section>
 
-        <h3>What</h3>
-        <p>Section 508 is a law requiring federal websites and electronic content to be accessible to people with disabilities, particularly those with visual, auditory, or physical impairments.</p>
+        <!-- Section 3: ARIA (Accessible Rich Internet Applications) -->
+        <section class="content">
+            <h2>5.3 ARIA (Accessible Rich Internet Applications)</h2>
+            <h3>What</h3>
+            <p>ARIA provides additional markup to improve accessibility for dynamic web content. Read more on the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA" target="_blank">MDN ARIA Guide</a>.</p>
 
-        <h3>Why</h3>
-        <p>Ensuring that federal information and services are available to all citizens, regardless of ability, is a key principle of equality and inclusion in government operations.</p>
+            <div class="example">
+                <h4>Example:</h4>
+                <p>Using ARIA roles for buttons: <code>&lt;div role="button" tabindex="0" aria-pressed="false"&gt;Submit&lt;/div&gt;</code></p>
+            </div>
+        </section>
 
-        <h3>When</h3>
-        <p>Section 508 was enacted in 1998 and is continually revised to adapt to new technologies and accessibility needs.</p>
+        <!-- Section 4: Impact on Modern Web Design -->
+        <section class="content">
+            <h2>5.4 Impact on Modern Web Design</h2>
+            <h3>What</h3>
+            <p>Inclusive design ensures that websites are accessible to all users. Designers use WCAG guidelines to create flexible, user-friendly interfaces. Explore inclusive design practices on the <a href="https://www.a11yproject.com/" target="_blank">A11Y Project</a>.</p>
 
-        <h3>How</h3>
-        <p>The law mandates compliance with the WCAG guidelines, meaning that federal websites must meet certain accessibility standards, such as providing keyboard navigation and text alternatives for multimedia content.</p>
+            <div class="example">
+                <h4>Example:</h4>
+                <p>Responsive design for mobile and desktop: <code>@media (max-width: 768px) { body { font-size: 14px; } }</code></p>
+            </div>
+        </section>
 
-        <div class="example">
-            <h4>Example:</h4>
-            <p>A federal website might implement a video player with closed captions, ensuring that those who are hearing impaired can access the video’s content:</p>
-            <code>&lt;video controls&gt;&lt;track src="captions.vtt" kind="captions" srclang="en" label="English"&gt;&lt;/video&gt;</code>
-        </div>
-    </section>
+        <!-- Progress Tracker & Resources -->
+        <section class="extras">
+            <h2>Track Your Progress</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Understand WAI and WCAG guidelines</li>
+                <li><input type="checkbox"> Learn about Section 508 compliance</li>
+                <li><input type="checkbox"> Explore ARIA for dynamic content</li>
+            </ul>
 
-    <section>
-        <h2>5.3 ARIA (Accessible Rich Internet Applications)</h2>
-        <h3>Who</h3>
-        <p>WAI-ARIA is a technical specification created by the WAI within the W3C, designed for developers building dynamic web content.</p>
+            <div class="resources">
+                <h3>Additional Resources</h3>
+                <a href="https://webaim.org/resources/" class="download-link" target="_blank">WebAIM Accessibility Resources</a>
+            </div>
+        </section>
 
-        <h3>What</h3>
-        <p>ARIA provides a way to enhance the accessibility of web applications by adding additional markup to describe widgets, navigation, and other interactive elements that standard HTML does not cover.</p>
+        <!-- Social Proof -->
+        <section class="testimonials">
+            <h2>What Students Are Saying</h2>
+            <blockquote>
+                "This guide helped me understand web accessibility and its importance!" - Accessibility Advocate, 2024
+            </blockquote>
+        </section>
+    </main>
 
-        <h3>Why</h3>
-        <p>As web applications become more complex and interactive, standard HTML often fails to communicate how those applications should be used by people with disabilities. ARIA fills in those gaps, ensuring that web apps remain usable for all.</p>
-
-        <h3>When</h3>
-        <p>ARIA was introduced in 2008 as part of an effort to ensure that modern, dynamic web applications remain accessible as web technologies evolve.</p>
-
-        <h3>How</h3>
-        <p>ARIA allows developers to include specific roles, states, and properties in HTML elements to communicate their purpose to assistive technologies, like screen readers. For example, using <code>role</code> attributes to define the type of a user interface element.</p>
-
-        <div class="example">
-            <h4>Example:</h4>
-            <p>A button created using ARIA:</p>
-            <code>&lt;div role="button" tabindex="0" aria-pressed="false"&gt;Submit&lt;/div&gt;</code>
-        </div>
-    </section>
-
-    <section>
-        <h2>5.4 Impact of Accessibility on Modern Web Design</h2>
-        <h3>Who</h3>
-        <p>Modern web designers, developers, and organizations are responsible for incorporating accessibility into their projects.</p>
-
-        <h3>What</h3>
-        <p>Inclusive design principles focus on creating websites and applications that can be used by the widest range of people, including those with disabilities. This involves designing for flexibility, simplicity, and providing alternative ways of accessing content.</p>
-
-        <h3>Why</h3>
-        <p>Accessible design is not just about complying with laws; it also creates a better user experience for everyone, including people with temporary disabilities (e.g., a broken arm) or situational limitations (e.g., noisy environments).</p>
-
-        <h3>When</h3>
-        <p>Accessibility has always been important, but it has become more prominent as web technologies evolve and more people use the web for daily tasks. The introduction of WCAG and ARIA has spurred greater awareness and implementation of accessibility in design.</p>
-
-        <h3>How</h3>
-        <p>Designers use responsive layouts, contrast settings, and ARIA landmarks to ensure content is accessible. They also follow the WCAG guidelines to create flexible, user-friendly websites.</p>
-
-        <div class="example">
-            <h4>Example:</h4>
-            <p>A responsive design that ensures accessibility for mobile and desktop users:</p>
-            <code>@media (max-width: 768px) { body { font-size: 14px; } }</code>
-        </div>
-    </section>
-    <footer>
-    <a href="index.html">Back to Homepage</a>
+    <!-- Footer with a link back to the homepage -->
+    <footer class="footer">
+        <a href="index.html" class="cta-button">Back to Homepage</a>
     </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

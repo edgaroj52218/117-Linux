@@ -4,217 +4,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Key technologies, individuals, and innovations during the Web 2.0 era">
     <title>Web 2.0</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
-    <header>
-        <h1>4. Web 2.0</h1>
+    <!-- Header with Hamburger Menu -->
+    <header class="top-section">
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </header>
 
-    <section>
-        <h2>4.1 Google Search - PageRank</h2>
-        <h3>Who</h3>
-        <p>Google Search was developed by Larry Page and Sergey Brin, the co-founders of Google. The key innovation behind Google’s search engine was the PageRank algorithm, introduced in the late 1990s.</p>
+    <!-- Slide-out Menu -->
+    <nav class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="linux.html">Linux Commands</a>
+        <a href="git.html">Git Commands</a>
+        <a href="history.html">Internet History</a>
+    </nav>
+    <div class="overlay" id="overlay"></div>
 
-        <h3>What</h3>
-        <p>PageRank is an algorithm used by Google to rank web pages in search results. It analyzes the links between web pages to determine their importance and relevance, giving more weight to pages with high-quality inbound links.</p>
+    <!-- Main Content (F-pattern Layout) -->
+    <main>
+        <h1>Web 2.0</h1>
+        <p class="intro">Explore the key technologies and innovations that defined the Web 2.0 era, transforming how we interact with the internet today.</p>
 
-        <h3>Why</h3>
-        <p>PageRank addressed the limitations of Web 1.0 search engines, which often returned irrelevant results. Web 2.0's explosion of user-generated content required a more sophisticated ranking system to deliver accurate search results.</p>
+        <!-- Section 1: Google Search & PageRank -->
+        <section class="content">
+            <h2>4.1 Google Search - PageRank</h2>
+            <h3>Who</h3>
+            <p>Developed by Larry Page and Sergey Brin, Google's PageRank algorithm revolutionized search engines during the Web 2.0 era.</p>
 
-        <h3>When</h3>
-        <p>PageRank was introduced with Google Search in 1998 and became central to Google’s success as Web 2.0 technologies expanded in the mid-2000s.</p>
+            <h3>What</h3>
+            <p>PageRank ranks web pages based on the quality of inbound links, helping users find relevant content. Learn more about how PageRank works on the <a href="https://www.google.com/search/howsearchworks/algorithms/" target="_blank">Google Search Guide</a>.</p>
 
-        <h3>How</h3>
-        <p>PageRank analyzes the number and quality of links pointing to a page. Pages with more high-quality links are ranked higher. As Web 2.0 grew, PageRank evolved with additional factors such as user behavior and content freshness.</p>
+            <div class="example">
+                <h4>Example:</h4>
+                <p>PageRank analyzes links to determine the relevance of a webpage, allowing Google to display the most relevant results for your search.</p>
+            </div>
+        </section>
 
-        <div class="example">
-            <h4>Example:</h4>
-            <p>When you search for "best smartphones," PageRank helps Google prioritize authoritative pages by analyzing how many trusted sites link to each page. Major tech websites are likely to rank higher.</p>
-        </div>
-    </section>
+        <!-- Section 2: Roy Fielding & REST -->
+        <section class="content">
+            <h2>4.2 Roy Fielding and REST</h2>
+            <h3>What</h3>
+            <p>REST (Representational State Transfer) allows web services to interact seamlessly. It became the backbone of Web 2.0 APIs. Read more in <a href="https://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven" target="_blank">Roy Fielding's Blog</a>.</p>
 
-    <section>
-        <h2>4.2 Roy Fielding and REST Dissertation</h2>
-        <h3>Who</h3>
-        <p>Roy Fielding is a computer scientist known for introducing the concept of REST (Representational State Transfer) in his 2000 dissertation.</p>
+            <div class="example">
+                <h4>Example:</h4>
+                <p>A typical REST API request: <code>GET https://api.example.com/users/{userID}</code></p>
+            </div>
+        </section>
 
-        <h3>What</h3>
-        <p>REST is an architectural style for designing scalable and efficient networked applications. It uses HTTP to perform CRUD operations with each resource represented by a URL.</p>
+        <!-- Section 3: Node.js & JavaScript -->
+        <section class="content">
+            <h2>4.3 Node.js - Ryan Dahl</h2>
+            <h3>Who</h3>
+            <p>Ryan Dahl introduced Node.js, enabling server-side JavaScript for high-performance applications. Learn more on <a href="https://nodejs.dev/learn" target="_blank">Node.js Documentation</a>.</p>
 
-        <h3>Why</h3>
-        <p>REST became essential during the rise of Web 2.0 to build scalable, user-driven applications and APIs. It was a simpler, more efficient alternative to SOAP, which was more complex and resource-intensive.</p>
+            <div class="example">
+                <h4>Example:</h4>
+                <p>Node.js powers real-time applications like chat servers and live content streaming.</p>
+            </div>
+        </section>
 
-        <h3>When</h3>
-        <p>Fielding’s dissertation was published in 2000, and REST gained widespread adoption with the rise of Web 2.0 in the mid-2000s.</p>
+        <!-- Section 4: Python & Django -->
+        <section class="content">
+            <h2>4.4 Python Guide & Django</h2>
+            <h3>What</h3>
+            <p>Python's simplicity made it popular for Web 2.0 platforms. Django, introduced in 2005, streamlined backend development. Explore more at <a href="https://www.djangoproject.com/" target="_blank">Django Official Site</a>.</p>
 
-        <h3>How</h3>
-        <p>RESTful services use HTTP and follow principles like statelessness and resource-based URLs. These make web services scalable and efficient. Platforms like Twitter and Facebook widely adopted REST APIs for integration.</p>
+            <div class="example">
+                <h4>Example:</h4>
+                <p>Instagram was built using Python and Django, allowing for rapid scaling.</p>
+            </div>
+        </section>
 
-        <div class="example">
-            <h4>Example:</h4>
-            <p>A common REST API request might be an HTTP GET request to retrieve user data: <code>GET https://api.socialmedia.com/users/{userID}</code>.</p>
-        </div>
-    </section>
+        <!-- Section 5: Git & Linus Torvalds -->
+        <section class="content">
+            <h2>4.5 Git - Linus Torvalds</h2>
+            <h3>What</h3>
+            <p>Git is a version control system essential for Web 2.0 development. Read more on the <a href="https://git-scm.com/book/en/v2" target="_blank">Pro Git Book</a>.</p>
 
-    <section>
-        <h2>4.3 Ryan Dahl (Node.js / JavaScript)</h2>
-        <h3>Who</h3>
-        <p>Ryan Dahl is the creator of Node.js, a runtime environment for executing JavaScript server-side. His work revolutionized real-time, interactive web applications during the Web 2.0 era.</p>
+            <div class="example">
+                <h4>Example:</h4>
+                <p>Git is used in open-source projects like Linux and React development.</p>
+            </div>
+        </section>
 
-        <h3>What</h3>
-        <p>Node.js allows developers to use JavaScript for server-side scripting. It introduced full-stack JavaScript development, enabling the creation of dynamic, scalable web applications.</p>
+        <!-- Section 6: Cloud Hosting & Web 2.0 -->
+        <section class="content">
+            <h2>4.6 Cloud Hosting</h2>
+            <p>Cloud hosting services like AWS revolutionized web hosting by providing scalable infrastructure. Learn more on <a href="https://aws.amazon.com/what-is-cloud-computing/" target="_blank">AWS Cloud</a>.</p>
+        </section>
 
-        <h3>Why</h3>
-        <p>Node.js addresses the need for efficient, real-time applications such as chat servers and live content streaming by providing an event-driven, non-blocking I/O model.</p>
+        <!-- Progress Tracker & Downloads -->
+        <section class="extras">
+            <h2>Track Your Progress</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Understand Google's PageRank algorithm</li>
+                <li><input type="checkbox"> Explore the role of REST APIs</li>
+                <li><input type="checkbox"> Learn about Node.js and its impact</li>
+            </ul>
 
-        <h3>When</h3>
-        <p>Dahl introduced Node.js in 2009, which quickly gained popularity during the Web 2.0 era, marking the rise of "JavaScript everywhere."</p>
+            <div class="resources">
+                <h3>Downloadable Resources</h3>
+                <a href="https://www.oreilly.com/library/view/web-20/9780596527694/" class="download-link" target="_blank">Explore "Web 2.0: Principles and Best Practices"</a>
+            </div>
+        </section>
 
-        <h3>How</h3>
-        <p>Node.js allows developers to build real-time applications using JavaScript on both the front end and back end. Its event-driven architecture makes it ideal for high-performance applications.</p>
+        <!-- Social Proof -->
+        <section class="testimonials">
+            <h2>What Students Are Saying</h2>
+            <blockquote>
+                "This guide helped me master Web 2.0 concepts quickly!" - Web Developer, 2024
+            </blockquote>
+        </section>
+    </main>
 
-        <div class="example">
-            <h4>Example:</h4>
-            <p>A classic use case for Node.js is a real-time chat application where multiple users can send and receive messages simultaneously.</p>
-        </div>
-    </section>
-
-    <section>
-        <h2>4.4 Python Guide & Van Rossum</h2>
-        <h3>Who</h3>
-        <p>Guido van Rossum is the creator of Python, a widely used programming language. Python became highly popular in Web 2.0 for backend development and web frameworks like Django.</p>
-
-        <h3>What</h3>
-        <p>Python is a high-level, interpreted language known for its simplicity and readability. It became a go-to language for building scalable, dynamic web applications, particularly with frameworks like Django and Flask.</p>
-
-        <h3>Why</h3>
-        <p>Python's simplicity and efficiency made it ideal for Web 2.0 platforms, where rapid application development was needed. Frameworks like Django allowed developers to quickly build robust web apps.</p>
-
-        <h3>When</h3>
-        <p>Python was created in 1991, but its popularity surged during the Web 2.0 era in the mid-2000s, especially with the release of Django in 2005.</p>
-
-        <h3>How</h3>
-        <p>Python is widely used in web development, APIs, and data-driven platforms. Django helped developers build powerful applications quickly, with built-in security and scalability features.</p>
-
-        <div class="example">
-            <h4>Example:</h4>
-            <p>Instagram, a prominent Web 2.0 platform, was built using Python and the Django framework, allowing for rapid scaling while maintaining code simplicity.</p>
-        </div>
-    </section>
-
-    <section>
-        <h2>4.5 Git, Linus Torvalds</h2>
-        <h3>Who</h3>
-        <p>Linus Torvalds, the creator of the Linux operating system, also developed Git in 2005. Git is a distributed version control system that became crucial for Web 2.0 development.</p>
-
-        <h3>What</h3>
-        <p>Git allows developers to track changes in their code, collaborate globally, and manage projects more effectively. It became the most widely used version control system during the rise of Web 2.0 technologies.</p>
-
-        <h3>Why</h3>
-        <p>As Web 2.0 projects grew in complexity, Git's ability to handle collaboration, branching, and merging efficiently made it essential for software development, especially in open-source projects.</p>
-
-        <h3>When</h3>
-        <p>Git was released in 2005 and quickly gained popularity in the open-source community. By 2008, with the rise of GitHub, Git became the de facto standard for version control.</p>
-
-        <h3>How</h3>
-        <p>Git tracks changes in source code and allows for branching, making it easy for developers to work on features independently. Its distributed nature ensures that every developer has a full copy of the project’s history.</p>
-
-        <div class="example">
-            <h4>Example:</h4>
-            <p>Git is widely used in collaborative projects like React or Angular development, where thousands of developers contribute to a single codebase using pull requests and feature branches.</p>
-        </div>
-    </section>
-
-    <section>
-        <h2>4.6 Web Hosting Technologies in Web 2.0</h2>
-        <h3>Rise of Cloud Hosting</h3>
-        <p><strong>Who:</strong> Cloud hosting services were pioneered by companies like Amazon, Google, and Microsoft with the introduction of AWS (Amazon Web Services), Google Cloud, and Microsoft Azure.</p>
-
-        <h3>What:</h3>
-        <p>Cloud hosting revolutionized web hosting by allowing websites and applications to run on virtual servers in the cloud, making them highly scalable, flexible, and cost-effective. This marked a departure from traditional physical server hosting.</p>
-
-        <h3>Why:</h3>
-        <p>Cloud hosting allowed Web 2.0 applications to scale dynamically with user demand. Instead of purchasing physical hardware, companies could rent computing power, storage, and network resources as needed.</p>
-
-        <h3>When:</h3>
-        <p>AWS was launched in 2006, marking the rise of cloud hosting as a mainstream solution. Google Cloud and Microsoft Azure followed soon after, offering a variety of cloud services for businesses and developers.</p>
-
-        <h3>How:</h3>
-        <p>Cloud hosting operates by distributing website and application data across multiple virtual servers. This ensures that if one server fails, others take over to keep the system running, improving uptime and reliability. Web 2.0 platforms benefited from this flexibility.</p>
-
-        <div class="example">
-            <h4>Example:</h4>
-            <p>Popular Web 2.0 platforms like Netflix use AWS for scalable cloud hosting, allowing them to handle millions of users with varying demand, such as streaming during peak hours.</p>
-        </div>
-
-        <h3>Shared vs. VPS vs. Dedicated Hosting</h3>
-        <p><strong>What:</strong> Web hosting environments can be categorized into shared, VPS (Virtual Private Server), and dedicated hosting. Each has its use case depending on the website's traffic, resource needs, and security requirements.</p>
-
-        <h3>How:</h3>
-        <p>In shared hosting, multiple websites share the same physical server, making it a cost-effective but less performant solution. VPS hosting provides more control by partitioning a physical server into virtual servers. Dedicated hosting gives users full control over a physical server, ensuring the best performance and security, but at a higher cost.</p>
-
-        <div class="example">
-            <h4>Example:</h4>
-            <p>For small businesses with limited traffic, shared hosting might be sufficient. However, larger e-commerce sites might require dedicated hosting for better security and performance.</p>
-        </div>
-    </section>
-
-    <section>
-        <h2>4.7 Browser Wars Part 2 (2000s-Present)</h2>
-        <h3>Internet Explorer vs. Firefox vs. Chrome</h3>
-        <p><strong>Who:</strong> The second browser war was fought between Microsoft’s Internet Explorer, Mozilla’s Firefox, and Google Chrome, starting in the early 2000s and continuing to the present day.</p>
-
-        <h3>What:</h3>
-        <p>After Netscape’s defeat in the first browser war, Mozilla rose from its ashes with Firefox, an open-source browser. Google Chrome, launched in 2008, eventually dominated the market with its fast, minimalistic interface and superior performance.</p>
-
-        <h3>Why:</h3>
-        <p>Internet Explorer dominated the browser market during the early 2000s, but as the web evolved, users began seeking faster, more secure, and standards-compliant browsers. Firefox capitalized on this shift, offering an open-source alternative, while Chrome surpassed both with its speed, security features, and developer-friendly environment.</p>
-
-        <h3>When:</h3>
-        <p>Firefox was released in 2004, becoming popular among power users. Google Chrome followed in 2008, rapidly overtaking both Firefox and Internet Explorer to become the most popular browser by the early 2010s.</p>
-
-        <h3>How:</h3>
-        <p>Chrome’s success was largely due to its efficient use of system resources, faster JavaScript engine (V8), and a user interface focused on simplicity. Firefox and Internet Explorer struggled to keep up, especially as Google integrated Chrome more deeply into its services and web ecosystem.</p>
-
-        <div class="example">
-            <h4>Example:</h4>
-            <p>Google Chrome’s minimal design and emphasis on speed made it the browser of choice for developers and general users alike, enabling it to surpass its competitors within a few years.</p>
-        </div>
-    </section>
-
-    <section>
-        <h2>4.8 ECMAScript and JavaScript Standardization</h2>
-        <h3>ECMA International</h3>
-        <p><strong>Who:</strong> ECMA International is the body responsible for standardizing JavaScript under the ECMAScript specification. JavaScript became the de facto standard for client-side scripting with the rise of Web 2.0.</p>
-
-        <h3>What:</h3>
-        <p>ECMAScript is the standardized version of JavaScript. The ECMAScript standard defines the specifications for scripting languages, ensuring cross-browser compatibility and consistent implementation across platforms.</p>
-
-        <h3>Why:</h3>
-        <p>As Web 2.0 applications became more complex and dynamic, the need for a standardized scripting language grew. Standardization helped ensure that JavaScript code worked consistently across all web browsers.</p>
-
-        <h3>When:</h3>
-        <p>The first edition of ECMAScript was standardized in 1997. Over the years, several updates followed, with ECMAScript 5 (ES5) released in 2009 and ECMAScript 6 (ES6), also known as ECMAScript 2015, introducing significant new features in 2015.</p>
-
-        <h3>How:</h3>
-        <p>JavaScript has evolved significantly, with ongoing improvements introduced through new versions of ECMAScript. ECMAScript 5 introduced stricter syntax and better error handling, while ECMAScript 6 brought modern features like arrow functions, promises, and classes, making JavaScript a more robust language for developing Web 2.0 applications.</p>
-
-        <div class="example">
-            <h4>Example:</h4>
-            <p>An ECMAScript 6 feature example: arrow functions simplify function syntax: <code>const sum = (a, b) => a + b;</code></p>
-        </div>
-    </section>
-
-    <footer>
-        <a href="index.html">Back to Homepage</a>
+    <!-- Footer with a link back to the homepage -->
+    <footer class="footer">
+        <a href="index.html" class="cta-button">Back to Homepage</a>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
