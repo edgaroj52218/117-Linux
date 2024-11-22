@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web 1.0</title>
+    <title><%= title %></title> <!-- Dynamic title -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -20,112 +20,48 @@
 
     <!-- Slide-out Menu -->
     <nav class="menu" id="menu">
-        <a href="index.html">Home</a>
-        <a href="linux.html">Linux Commands</a>
-        <a href="git.html">Git Commands</a>
-        <a href="history.html">Internet History</a>
+        <a href="/"><%= menu.home %></a> <!-- Dynamic home link -->
+        <a href="/linux"><%= menu.linuxCommands %></a> <!-- Dynamic Linux Commands link -->
+        <a href="/git"><%= menu.gitCommands %></a> <!-- Dynamic Git Commands link -->
+        <a href="/history"><%= menu.history %></a> <!-- Dynamic History link -->
     </nav>
     <div class="overlay" id="overlay"></div>
 
     <!-- Main Content (F-pattern Layout) -->
     <main>
-        <h1>Web 1.0</h1>
-        <p class="intro">Explore the early technologies, languages, and tools that laid the foundation for the World Wide Web, starting with the creation of HTML, HTTP, and early scripting languages.</p>
+        <h1><%= pageTitle %></h1> <!-- Dynamic page title -->
+        <p class="intro"><%= introText %></p> <!-- Dynamic introduction text -->
 
-        <!-- Section 1: HTML / HTTP Protocol -->
+        <% sections.forEach(function(section) { %>
+        <!-- Section: <% section.title %> -->
         <section class="content">
-            <h2>3.1 HTML / HTTP Protocol</h2>
-            <h3>Who</h3>
-            <p>Tim Berners-Lee, a British computer scientist, invented the World Wide Web. He developed core technologies like HTML and HTTP.</p>
-
-            <h3>What</h3>
-            <p>HTML (Hypertext Markup Language) structures web pages, while HTTP (Hypertext Transfer Protocol) facilitates communication between web browsers and servers.</p>
-
-            <h3>Why</h3>
-            <p>These technologies were created to make sharing information on the internet easier and more accessible.</p>
-
-            <h3>When</h3>
-            <p>Berners-Lee developed the first versions of HTML and HTTP between 1989 and 1990. The first website went live in 1991.</p>
-
-            <h3>How</h3>
-            <p>HTML structures web content, while HTTP defines how data is exchanged. This interaction formed the basis of the first static websites.</p>
-
+            <h2><%= section.title %></h2>
+            <% section.subsections.forEach(function(subsection) { %>
+                <h3><%= subsection.heading %></h3>
+                <p><%= subsection.text %></p>
+            <% }); %>
+            
+            <% if (section.example) { %>
             <div class="example">
                 <h4>Example:</h4>
-                <p>Read about the first website on the <a href="https://info.cern.ch" target="_blank">original CERN website</a>.</p>
+                <p>Read about the first website on the <a href="<%= section.example.link %>" target="_blank">original CERN website</a>.</p>
             </div>
+            <% } %>
         </section>
-
-        <!-- Section 2: JavaScript -->
-        <section class="content">
-            <h2>3.2 JavaScript</h2>
-            <h3>Who</h3>
-            <p>Brendan Eich, a programmer at Netscape, created JavaScript in 1995 to make web pages interactive.</p>
-
-            <h3>What</h3>
-            <p>JavaScript brought interactivity to static Web 1.0 pages, enabling features like form validation and pop-ups.</p>
-
-            <h3>Why</h3>
-            <p>It allowed developers to add interactivity without requiring a full page reload.</p>
-
-            <h3>How</h3>
-            <p>JavaScript manipulates HTML elements within the browser, enhancing user interaction. Learn more at <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">Mozilla Developer Network</a>.</p>
-        </section>
-
-        <!-- Section 3: CSS (Cascading Style Sheets) -->
-        <section class="content">
-            <h2>3.3 CSS</h2>
-            <h3>Who</h3>
-            <p>Håkon Wium Lie developed CSS while working at CERN, and it was adopted as a W3C standard in 1996.</p>
-
-            <h3>What</h3>
-            <p>CSS is a style sheet language used to control the presentation of HTML documents.</p>
-
-            <h3>Why</h3>
-            <p>CSS allowed developers to separate content from design, making website maintenance easier.</p>
-
-            <div class="example">
-                <h4>Example:</h4>
-                <p>Read more on the history of CSS at the <a href="https://www.w3.org/Style/CSS/" target="_blank">W3C CSS page</a>.</p>
-            </div>
-        </section>
-
-        <!-- Section 4: Server-Side Technologies -->
-        <section class="content">
-            <h2>3.4 Perl & PHP</h2>
-            <h3>What</h3>
-            <p>Perl and PHP allowed websites to generate dynamic content. These languages were widely used for CGI scripts and server-side logic.</p>
-
-            <div class="example">
-                <h4>Example:</h4>
-                <p>Explore the history of PHP on the <a href="https://www.php.net/manual/en/history.php.php" target="_blank">official PHP site</a>.</p>
-            </div>
-        </section>
-
-        <!-- Section 5: Early Search Engines -->
-        <section class="content">
-            <h2>3.6 Early Search Engines</h2>
-            <h3>What</h3>
-            <p>Early search engines like Archie, Lycos, and AltaVista helped users find information on the growing web.</p>
-
-            <div class="example">
-                <h4>Example:</h4>
-                <p>Learn about the history of search engines on <a href="https://www.seomechanic.com/complete-history-search-engines/" target="_blank">Seo Mechanic: The Complete History of Search Engines</a>.</p>
-            </div>
-        </section>
+        <% }); %>
 
         <!-- Progress Tracker & Downloads -->
         <section class="extras">
             <h2>Track Your Progress</h2>
             <ul class="checklist">
-                <li><input type="checkbox"> Understand HTML & HTTP basics</li>
-                <li><input type="checkbox"> Learn about JavaScript's early impact</li>
-                <li><input type="checkbox"> Explore the origins of CSS and PHP</li>
+                <% progressChecklist.forEach(function(item) { %>
+                    <li><input type="checkbox" <%= item.completed ? 'checked' : '' %>> <%= item.text %></li>
+                <% }); %>
             </ul>
 
             <div class="resources">
                 <h3>Downloadable Resources</h3>
-                <a href="Web History Overview.pdf" class="download-link" target="_blank">Download "Web History Overview" (PDF)</a>
+                <a href="<%= downloadLink %>" class="download-link" target="_blank">Download "Web History Overview" (PDF)</a>
             </div>
         </section>
 
@@ -133,14 +69,14 @@
         <section class="testimonials">
             <h2>What Students Are Saying</h2>
             <blockquote>
-                "This guide made learning about Web 1.0 technologies so much easier!" - Tech Student, 2024
+                "<%= testimonial %>" - <%= studentName %>, <%= studentYear %>
             </blockquote>
         </section>
     </main>
 
     <!-- Footer with a link back to the homepage -->
     <footer class="footer">
-        <a href="index.html" class="cta-button">Back to Homepage</a>
+        <a href="/" class="cta-button">Back to Homepage</a>
     </footer>
 
     <script src="script.js"></script>
