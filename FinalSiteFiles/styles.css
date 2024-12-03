@@ -1,0 +1,110 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header with Hamburger Menu */
+  .top-section {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1f2937;
+    z-index: 1000;
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+  }
+  
+  /* Menu */
+  .menu {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #1f2937;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    transition: right 0.3s ease;
+  }
+  
+  .menu.active {
+    right: 0;
+  }
+  
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
+  
+  /* Main Content */
+  main {
+    margin-top: 80px;
+    padding: 20px;
+  }
+  
+  .content {
+    margin-bottom: 40px;
+  }
+  
+  .extras {
+    margin-top: 40px;
+  }
+  
+  .checklist {
+    list-style: none;
+  }
+  
+  .checklist li {
+    margin: 10px 0;
+  }
+  
+  .download-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .download-link:hover {
+    text-decoration: underline;
+  }
+  
+  .testimonials {
+    background-color: #e5e7eb;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 8px;
+  }
+  
+  blockquote {
+    font-style: italic;
+  }
+  
