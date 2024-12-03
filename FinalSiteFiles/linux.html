@@ -4,150 +4,165 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top 10 Linux Commands and Common Errors</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        h3 {
-            margin-top: 30px;
-        }
-    </style>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h3>Top 10 Linux Commands with Examples</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>Command</th>
-                <th>Description</th>
-                <th>Example Usage</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><code>ls</code></td>
-                <td>List files and directories in the current directory.</td>
-                <td><code>ls -l</code> (detailed list)</td>
-            </tr>
-            <tr>
-                <td><code>cd &lt;directory&gt;</code></td>
-                <td>Change the current directory to <code>&lt;directory&gt;</code>.</td>
-                <td><code>cd Documents</code></td>
-            </tr>
-            <tr>
-                <td><code>pwd</code></td>
-                <td>Print the current working directory.</td>
-                <td><code>pwd</code></td>
-            </tr>
-            <tr>
-                <td><code>cp &lt;source&gt; &lt;destination&gt;</code></td>
-                <td>Copy files or directories from <code>&lt;source&gt;</code> to <code>&lt;destination&gt;</code>.</td>
-                <td><code>cp file.txt backup.txt</code></td>
-            </tr>
-            <tr>
-                <td><code>mv &lt;source&gt; &lt;destination&gt;</code></td>
-                <td>Move or rename files or directories from <code>&lt;source&gt;</code> to <code>&lt;destination&gt;</code>.</td>
-                <td><code>mv oldname.txt newname.txt</code></td>
-            </tr>
-            <tr>
-                <td><code>rm &lt;file&gt;</code></td>
-                <td>Remove (delete) a file. Use <code>-r</code> for directories (e.g., <code>rm -r &lt;directory&gt;</code>).</td>
-                <td><code>rm unwantedfile.txt</code></td>
-            </tr>
-            <tr>
-                <td><code>mkdir &lt;directory&gt;</code></td>
-                <td>Create a new directory named <code>&lt;directory&gt;</code>.</td>
-                <td><code>mkdir newfolder</code></td>
-            </tr>
-            <tr>
-                <td><code>touch &lt;file&gt;</code></td>
-                <td>Create an empty file named <code>&lt;file&gt;</code> or update its timestamp.</td>
-                <td><code>touch newfile.txt</code></td>
-            </tr>
-            <tr>
-                <td><code>man &lt;command&gt;</code></td>
-                <td>Display the manual page for a specific command.</td>
-                <td><code>man ls</code></td>
-            </tr>
-            <tr>
-                <td><code>chmod &lt;permissions&gt; &lt;file&gt;</code></td>
-                <td>Change the permissions of a file or directory. Use numerical or symbolic notation.</td>
-                <td><code>chmod 755 script.sh</code></td>
-            </tr>
-        </tbody>
-    </table>
+    <!-- Header with Hamburger Menu -->
+    <header class="top-section">
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
 
-    <h3>Common Linux Errors and Fixes</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>Error</th>
-                <th>Description</th>
-                <th>How to Fix</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><code>Permission denied</code></td>
-                <td>You don't have the necessary permissions to run a command or access a file.</td>
-                <td>Use <code>sudo</code> before the command, or adjust file permissions with <code>chmod</code>.</td>
-            </tr>
-            <tr>
-                <td><code>Command not found</code></td>
-                <td>The command you typed is not recognized.</td>
-                <td>Make sure the command is installed, or check for typos. You may need to install it using <code>apt</code> or <code>yum</code>.</td>
-            </tr>
-            <tr>
-                <td><code>No space left on device</code></td>
-                <td>Your disk is full.</td>
-                <td>Clear unnecessary files or increase disk space. Use <code>du</code> to find large files.</td>
-            </tr>
-            <tr>
-                <td><code>File not found</code></td>
-                <td>The file you're trying to access doesn't exist or the path is incorrect.</td>
-                <td>Check the file path and spelling, or create the file if needed.</td>
-            </tr>
-            <tr>
-                <td><code>Segmentation fault (core dumped)</code></td>
-                <td>A program tried to access restricted memory.</td>
-                <td>Check for bugs in the program, reinstall, or update the program.</td>
-            </tr>
-            <tr>
-                <td><code>E: Unable to locate package</code></td>
-                <td>A package is missing from the repository.</td>
-                <td>Run <code>sudo apt update</code> to refresh the package list, or ensure the package name is correct.</td>
-            </tr>
-            <tr>
-                <td><code>Device or resource busy</code></td>
-                <td>The system is trying to access a file or resource that's currently in use.</td>
-                <td>Use <code>lsof</code> or <code>fuser</code> to find the process using the resource and stop it if necessary.</td>
-            </tr>
-            <tr>
-                <td><code>Too many open files</code></td>
-                <td>The system has reached the maximum number of file descriptors.</td>
-                <td>Increase the limit with <code>ulimit -n</code>, or close unused files and processes.</td>
-            </tr>
-            <tr>
-                <td><code>Connection refused</code></td>
-                <td>A service you're trying to access is not running or the port is blocked.</td>
-                <td>Check if the service is running with <code>systemctl</code>, and ensure firewall rules allow traffic on the port.</td>
-            </tr>
-            <tr>
-                <td><code>Broken pipe</code></td>
-                <td>A process tried to send data to another process that has terminated.</td>
-                <td>Restart the processes, or check if the receiving process is still running.</td>
-            </tr>
-        </tbody>
-    </table>
+    <!-- Slide-out Menu -->
+    <nav class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="#info">Info</a>
+        <a href="#more">More</a>
+    </nav>
+
+    <!-- Overlay for Menu -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Main Content -->
+    <main>
+        <h3>Top 10 Linux Commands with Examples</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                    <th>Example Usage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows for commands -->
+                <tr>
+                    <td><code>ls</code></td>
+                    <td>List files and directories in the current directory.</td>
+                    <td><code>ls -l</code> (detailed list)</td>
+                </tr>
+                <tr>
+                    <td><code>cd &lt;directory&gt;</code></td>
+                    <td>Change the current directory to <code>&lt;directory&gt;</code>.</td>
+                    <td><code>cd Documents</code></td>
+                </tr>
+                <tr>
+                    <td><code>pwd</code></td>
+                    <td>Print the current working directory.</td>
+                    <td><code>pwd</code></td>
+                </tr>
+                <tr>
+                    <td><code>cp &lt;source&gt; &lt;destination&gt;</code></td>
+                    <td>Copy files or directories from <code>&lt;source&gt;</code> to <code>&lt;destination&gt;</code>.</td>
+                    <td><code>cp file.txt backup.txt</code></td>
+                </tr>
+                <tr>
+                    <td><code>mv &lt;source&gt; &lt;destination&gt;</code></td>
+                    <td>Move or rename files or directories from <code>&lt;source&gt;</code> to <code>&lt;destination&gt;</code>.</td>
+                    <td><code>mv oldname.txt newname.txt</code></td>
+                </tr>
+                <tr>
+                    <td><code>rm &lt;file&gt;</code></td>
+                    <td>Remove (delete) a file. Use <code>-r</code> for directories (e.g., <code>rm -r &lt;directory&gt;</code>).</td>
+                    <td><code>rm unwantedfile.txt</code></td>
+                </tr>
+                <tr>
+                    <td><code>mkdir &lt;directory&gt;</code></td>
+                    <td>Create a new directory named <code>&lt;directory&gt;</code>.</td>
+                    <td><code>mkdir newfolder</code></td>
+                </tr>
+                <tr>
+                    <td><code>touch &lt;file&gt;</code></td>
+                    <td>Create an empty file named <code>&lt;file&gt;</code> or update its timestamp.</td>
+                    <td><code>touch newfile.txt</code></td>
+                </tr>
+                <tr>
+                    <td><code>man &lt;command&gt;</code></td>
+                    <td>Display the manual page for a specific command.</td>
+                    <td><code>man ls</code></td>
+                </tr>
+                <tr>
+                    <td><code>chmod &lt;permissions&gt; &lt;file&gt;</code></td>
+                    <td>Change the permissions of a file or directory. Use numerical or symbolic notation.</td>
+                    <td><code>chmod 755 script.sh</code></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Common Linux Errors and Fixes</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Error</th>
+                    <th>Description</th>
+                    <th>How to Fix</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows for errors -->
+                <tr>
+                    <td><code>Permission denied</code></td>
+                    <td>You don't have the necessary permissions to run a command or access a file.</td>
+                    <td>Use <code>sudo</code> before the command, or adjust file permissions with <code>chmod</code>.</td>
+                </tr>
+                <tr>
+                    <td><code>Command not found</code></td>
+                    <td>The command you typed is not recognized.</td>
+                    <td>Make sure the command is installed, or check for typos. You may need to install it using <code>apt</code> or <code>yum</code>.</td>
+                </tr>
+                <tr>
+                    <td><code>No space left on device</code></td>
+                    <td>Your disk is full.</td>
+                    <td>Clear unnecessary files or increase disk space. Use <code>du</code> to find large files.</td>
+                </tr>
+                <tr>
+                    <td><code>File not found</code></td>
+                    <td>The file you're trying to access doesn't exist or the path is incorrect.</td>
+                    <td>Check the file path and spelling, or create the file if needed.</td>
+                </tr>
+                <tr>
+                    <td><code>Segmentation fault (core dumped)</code></td>
+                    <td>A program tried to access restricted memory.</td>
+                    <td>Check for bugs in the program, reinstall, or update the program.</td>
+                </tr>
+                <tr>
+                    <td><code>E: Unable to locate package</code></td>
+                    <td>A package is missing from the repository.</td>
+                    <td>Run <code>sudo apt update</code> to refresh the package list, or ensure the package name is correct.</td>
+                </tr>
+                <tr>
+                    <td><code>Device or resource busy</code></td>
+                    <td>The system is trying to access a file or resource that's currently in use.</td>
+                    <td>Use <code>lsof</code> or <code>fuser</code> to find the process using the resource and stop it if necessary.</td>
+                </tr>
+                <tr>
+                    <td><code>Too many open files</code></td>
+                    <td>The system has reached the maximum number of file descriptors.</td>
+                    <td>Increase the limit with <code>ulimit -n</code>, or close unused files and processes.</td>
+                </tr>
+                <tr>
+                    <td><code>Connection refused</code></td>
+                    <td>A service you're trying to access is not running or the port is blocked.</td>
+                    <td>Check if the service is running with <code>systemctl</code>, and ensure firewall rules allow traffic on the port.</td>
+                </tr>
+                <tr>
+                    <td><code>Broken pipe</code></td>
+                    <td>A process tried to send data to another process that has terminated.</td>
+                    <td>Restart the processes, or check if the receiving process is still running.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Link back to the main page -->
+        <p><a href="index.html">Back to Main Page</a></p>
+    </main>
+
+    <!-- Include JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
