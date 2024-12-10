@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="/css/contentpages1.css">
+</head>
+
+<body>
+    <!-- Include Header Partial -->
+    <%- include('partials/header') %>
+
+    <!-- Main Content -->
+    <main>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>If you have any questions, feel free to reach out to me:</p>
+            <p>Email: <a href="mailto:eso@njit.edu">eso@njit.edu</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/ojedastevenedgar/" target="_blank">https://www.linkedin.com/in/ojedastevenedgar/</a></p>
+            <p>GitHub: <a href="https://github.com/edgaroj52218" target="_blank">https://github.com/edgaroj52218</a></p>
+
+            <ul class="social-links">
+                <li><a href="https://x.com/x" target="_blank">
+                    <img src="/images/X_logo.png" alt="X Logo">
+                </a></li>
+                <li><a href="https://instagram.com/instagram" target="_blank">
+                    <img src="/images/IG_logo.png" alt="Instagram Logo">
+                </a></li>
+                <li><a href="https://facebook.com/facebook" target="_blank">
+                    <img src="/images/Facebook_logo.png" alt="Facebook Logo">
+                </a></li>
+                <li><a href="https://youtube.com/youtube" target="_blank">
+                    <img src="/images/YT_icon.png" alt="YouTube Logo">
+                </a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Include Footer Partial -->
+    <%- include('partials/footer', {
+        prevPage: '/',
+        prevPageLabel: 'Home'
+    }) %>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

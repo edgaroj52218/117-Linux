@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Linux Commands and Common Errors</title>
+    <link rel="stylesheet" href="/css/contentpages1.css">
+</head>
+
+<body>
+    <!-- Include Header Partial -->
+    <%- include('partials/header') %>
+
+    <!-- Main Content -->
+    <main>
+        <h3>Top 10 Linux Commands with Examples</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                    <th>Example Usage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>ls</code></td>
+                    <td>List files and directories in the current directory.</td>
+                    <td><code>ls -l</code> (detailed list)</td>
+                </tr>
+                <tr>
+                    <td><code>cd &lt;directory&gt;</code></td>
+                    <td>Change the current directory to <code>&lt;directory&gt;</code>.</td>
+                    <td><code>cd Documents</code></td>
+                </tr>
+                <tr>
+                    <td><code>pwd</code></td>
+                    <td>Print the current working directory.</td>
+                    <td><code>pwd</code></td>
+                </tr>
+                <tr>
+                    <td><code>cp &lt;source&gt; &lt;destination&gt;</code></td>
+                    <td>Copy files or directories from <code>&lt;source&gt;</code> to <code>&lt;destination&gt;</code>.</td>
+                    <td><code>cp file.txt backup.txt</code></td>
+                </tr>
+                <tr>
+                    <td><code>mv &lt;source&gt; &lt;destination&gt;</code></td>
+                    <td>Move or rename files or directories from <code>&lt;source&gt;</code> to <code>&lt;destination&gt;</code>.</td>
+                    <td><code>mv oldname.txt newname.txt</code></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Common Linux Errors and Fixes</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Error</th>
+                    <th>Description</th>
+                    <th>How to Fix</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>Permission denied</code></td>
+                    <td>You don't have the necessary permissions to run a command or access a file.</td>
+                    <td>Use <code>sudo</code> before the command, or adjust file permissions with <code>chmod</code>.</td>
+                </tr>
+                <tr>
+                    <td><code>Command not found</code></td>
+                    <td>The command you typed is not recognized.</td>
+                    <td>Make sure the command is installed, or check for typos. You may need to install it using <code>apt</code> or <code>yum</code>.</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <!-- Include Footer Partial -->
+    <%- include('partials/footer', {
+        prevPage: '/',
+        prevPageLabel: 'Home',
+        nextPage: '/git',
+        nextPageLabel: 'Git Commands'
+    }) %>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Accessibility & Standards Overview">
+    <title>Web Accessibility & Standards</title>
+    <link rel="stylesheet" href="/css/contentpages1.css">
+</head>
+
+<body>
+    <!-- Include Header Partial -->
+    <%- include('partials/header') %>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Web Accessibility & Standards</h1>
+        <p class="intro">Learn how web accessibility initiatives and standards help ensure inclusivity for all users.</p>
+
+        <!-- Section 1: WAI (Web Accessibility Initiative) -->
+        <section class="content">
+            <h2>5.1 WAI (Web Accessibility Initiative)</h2>
+            <h3>Who</h3>
+            <p>Led by the W3C, the WAI works to improve web accessibility for people with disabilities.</p>
+
+            <h3>What</h3>
+            <p>WAI provides guidelines like the Web Content Accessibility Guidelines (WCAG) to ensure that websites are accessible. Explore the guidelines on the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank">W3C WAI Website</a>.</p>
+
+            <div class="example">
+                <h4>Example:</h4>
+                <p>Using <code>alt</code> attributes for images: <code>&lt;img src="example.jpg" alt="Description of the image"&gt;</code></p>
+            </div>
+        </section>
+
+        <!-- Section 2: Section 508 (U.S.) -->
+        <section class="content">
+            <h2>5.2 Section 508 (U.S.)</h2>
+            <h3>What</h3>
+            <p>A U.S. law requiring federal websites to be accessible to all citizens. Learn more about Section 508 at the <a href="https://www.section508.gov/" target="_blank">Section 508 Official Site</a>.</p>
+
+            <div class="example">
+                <h4>Example:</h4>
+                <p>Adding closed captions to a video: <code>&lt;video controls&gt;&lt;track src="captions.vtt" kind="captions" srclang="en" label="English"&gt;&lt;/video&gt;</code></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer Partial -->
+    <%- include('partials/footer', {
+        prevPage: '/web2',
+        prevPageLabel: 'Web 2.0',
+        nextPage: '/futureofinternet',
+        nextPageLabel: 'Future of the Internet'
+    }) %>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
