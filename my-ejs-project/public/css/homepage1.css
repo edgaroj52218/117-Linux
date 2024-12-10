@@ -85,7 +85,7 @@ header .hamburger div {
 /* Slide-out Menu */
 .menu {
     position: fixed;
-    top: 119px; /* Start directly below the header */
+    top: 104px; /* Start directly below the header */
     right: -250px; /* Initially hidden off-screen */
     width: 250px;
     height: calc(100vh - 80px); /* Use remaining height below the header */
