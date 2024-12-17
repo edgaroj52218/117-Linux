@@ -1,0 +1,235 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Top Section (Navigation) */
+.top-section {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #1f2937; /* Dark background for authority */
+  color: #fff;
+  z-index: 1000;
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Transform hamburger to 'X' when active */
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Slide-out Menu */
+.menu {
+  position: fixed;
+  right: -300px; /* Hidden by default */
+  top: 0;
+  height: 100%;
+  width: 300px;
+  background-color: #1f2937;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  gap: 20px;
+  transition: right 0.3s ease;
+  z-index: 1001;
+}
+
+.menu.active {
+  right: 0; /* Slide in from the right */
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #60a5fa; /* Light blue hover effect */
+}
+
+/* Overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* Main Content */
+main {
+  margin-top: 80px; /* Offset for fixed header */
+  width: 90%;
+  max-width: 1200px;
+  padding: 40px 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Z-pattern Layout */
+main h1 {
+  width: 100%;
+  color: #1f2937;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+main ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 30px;
+  width: 48%;
+}
+
+main ul li {
+  margin: 12px 0;
+}
+
+main ul li a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+main ul li a:hover {
+  border-bottom: 2px solid #2563eb;
+}
+
+/* History Section */
+section#history {
+  width: 100%;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 2px solid #e5e7eb;
+}
+
+section#history h1 {
+  color: #111827;
+  font-size: 1.75rem;
+  margin-bottom: 20px;
+}
+
+section#history ul {
+  list-style-type: none;
+}
+
+section#history ul li p {
+  margin: 8px 0;
+}
+
+section#history ul li a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+section#history ul li a:hover {
+  color: #1e40af;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  padding: 30px 20px;
+  text-align: center;
+  background-color: #1f2937;
+  color: #fff;
+  margin-top: 50px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #2563eb;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  main ul {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    width: 80%;
+    right: -80%;
+  }
+
+  .menu.active {
+    right: 0;
+  }
+
+  main {
+    width: 95%;
+    margin-top: 100px;
+    padding: 20px 10px;
+  }
+
+  .footer {
+    padding: 20px 10px;
+  }
+}

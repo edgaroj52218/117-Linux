@@ -1,0 +1,10 @@
+<footer class="footer">
+    <div class="footer-nav">
+        <% if (typeof prevPage !== 'undefined') { %>
+            <a href="<%= prevPage %>" class="nav-button"><%= prevPageLabel %> &larr;</a>
+        <% } %>
+        <% if (typeof nextPage !== 'undefined') { %>
+            <a href="<%= nextPage %>" class="nav-button"><%= nextPageLabel %> &rarr;</a>
+        <% } %>
+    </div>
+</footer>

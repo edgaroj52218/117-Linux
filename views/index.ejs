@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title || 'Survival Guide for Linux and GIT' %></title>
+  <link rel="stylesheet" href="/css/indexstyles.css">
+</head>
+
+<body>
+  <!-- Header with Hamburger Menu -->
+  <header class="top-section">
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <!-- Slide-out Menu -->
+  <nav class="menu" id="menu">
+    <a href="/">Home</a>
+    <a href="/contact">Contact</a>
+    <a href="#info">Info</a>
+    <a href="#more">More</a>
+  </nav>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Main Content -->
+  <main>
+    <h1>Common Linux Commands, Errors, and Fixes</h1>
+    <ul>
+      <li><a href="/linux">Common Linux Commands, Errors, and Fixes</a></li>
+      <li><a href="/git">Common Git Commands, Errors, and Fixes</a></li>
+    </ul>
+
+    <section id="history">
+      <h1>History of the Internet</h1>
+      <ul>
+        <li><a href="/preinternet">Pre-Internet</a></li>
+        <li><a href="/internet">Internet</a></li>
+        <li><a href="/web1">Web 1.0</a></li>
+        <li><a href="/web2">Web 2.0</a></li>
+        <li><a href="/webaccessibility">Web Accessibility & Standards</a></li>
+        <li><a href="/futureofinternet">Future of the Internet</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="/contact" class="cta-button">Get in Touch</a>
+  </footer>
+
+  <script src="/js/index.js"></script>
+</body>
+
+</html>

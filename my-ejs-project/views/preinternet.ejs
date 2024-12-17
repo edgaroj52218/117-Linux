@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Internet</title>
+    <link rel="stylesheet" href="/css/contentpages1.css">
+</head>
+
+<body>
+    <!-- Include Header Partial -->
+    <%- include('partials/header') %>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Pre-Internet</h1>
+        <p class="intro">Explore the origins of the internet, focusing on key figures and pivotal moments that led to the development of a globally connected network.</p>
+
+        <!-- Section 1: JC Licklider -->
+        <section class="content">
+            <h2>1.1 JC Licklider</h2>
+            <h3>Who</h3>
+            <p>Joseph Carl Robnett Licklider, commonly known as JC Licklider, was an American psychologist and computer scientist.</p>
+
+            <h3>What</h3>
+            <p>Licklider was a pioneer in computer science and conceptualized the "Intergalactic Computer Network," which laid the foundation for modern internet ideas.</p>
+
+            <h3>Why</h3>
+            <p>He envisioned computers enhancing human communication and collaboration. His ideas eventually shaped the creation of ARPANET, the precursor to the internet.</p>
+
+            <h3>When</h3>
+            <p>In the early 1960s, while at ARPA, Licklider’s work significantly influenced networked computing and time-sharing systems.</p>
+
+            <div class="example">
+                <h4>Example:</h4>
+                <p>Read Licklider's influential paper, "<a href="https://worrydream.com/refs/Licklider_1960_-_Man-Computer_Symbiosis.pdf" target="_blank">Man-Computer Symbiosis</a>," where he envisions human-computer interaction for collaborative work.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Nuclear Weapons -->
+        <section class="content">
+            <h2>1.2 Nuclear Weapons</h2>
+            <h3>Who</h3>
+            <p>During the Cold War, the U.S. and Soviet Union developed nuclear arsenals, influencing the need for secure communication.</p>
+
+            <h3>What</h3>
+            <p>The presence and threat of nuclear weapons led to a push for a resilient, decentralized communication system to withstand nuclear attacks.</p>
+
+            <h3>Why</h3>
+            <p>Maintaining communication and command control during nuclear strikes was essential, spurring innovation in network resilience.</p>
+
+            <div class="example">
+                <h4>Example:</h4>
+                <p>Read about the impact of packet-switching technology on modern networks in "<a href="https://www.internetsociety.org/internet/history-internet/brief-history-internet" target="_blank">A Brief History of the Internet</a>" by the Internet Society.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer Partial -->
+    <%- include('partials/footer', {
+        prevPage: '/git',
+        prevPageLabel: 'Git Commands',
+        nextPage: '/internet',
+        nextPageLabel: 'Internet'
+    }) %>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

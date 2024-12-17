@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title || 'Internet' %></title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <!-- Header with Hamburger Menu -->
+    <header class="top-section">
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <!-- Slide-out Menu -->
+    <nav class="menu" id="menu">
+        <a href="/index">Home</a>
+        <a href="/linux">Linux Commands</a>
+        <a href="/git">Git Commands</a>
+        <a href="/history">Internet History</a>
+    </nav>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Main Content (F-pattern Layout) -->
+    <main>
+        <h1>Internet</h1>
+        <p class="intro"><%= intro %></p>
+
+        <!-- Section 1: ARPANET -->
+        <section class="content">
+            <h2>2.1 ARPANET</h2>
+            <h3>Who</h3>
+            <p><%= arpanet.who %></p>
+
+            <h3>What</h3>
+            <p><%= arpanet.what %></p>
+
+            <h3>Why</h3>
+            <p><%= arpanet.why %></p>
+
+            <h3>When</h3>
+            <p><%= arpanet.when %></p>
+
+            <h3>How</h3>
+            <p><%= arpanet.how %></p>
+
+            <div class="example">
+                <h4>Example:</h4>
+                <p><%= arpanet.example %></p>
+            </div>
+        </section>
+
+        <!-- Section 2: Vint Cerf & Bob Kahn -->
+        <section class="content">
+            <h2>2.2 Vint Cerf & Bob Kahn</h2>
+            <h3>Who</h3>
+            <p><%= cerfKahn.who %></p>
+
+            <h3>What</h3>
+            <p><%= cerfKahn.what %></p>
+
+            <h3>Why</h3>
+            <p><%= cerfKahn.why %></p>
+
+            <h3>When</h3>
+            <p><%= cerfKahn.when %></p>
+
+            <h3>How</h3>
+            <p><%= cerfKahn.how %></p>
+
+            <div class="example">
+                <h4>Example:</h4>
+                <p><%= cerfKahn.example %></p>
+            </div>
+        </section>
+
+        <!-- Section 3: Early Programs on ARPANET -->
+        <section class="content">
+            <h2>2.3 Early Programs Used on ARPANET</h2>
+            <h3>Who</h3>
+            <p><%= earlyPrograms.who %></p>
+
+            <h3>What</h3>
+            <p><%= earlyPrograms.what %></p>
+
+            <h3>Why</h3>
+            <p><%= earlyPrograms.why %></p>
+
+            <h3>When</h3>
+            <p><%= earlyPrograms.when %></p>
+
+            <h3>How</h3>
+            <p><%= earlyPrograms.how %></p>
+
+            <div class="example">
+                <h4>Example:</h4>
+                <p><%= earlyPrograms.example %></p>
+            </div>
+        </section>
+
+        <!-- Progress Tracker & Downloads -->
+        <section class="extras">
+            <h2>Track Your Progress</h2>
+            <ul class="checklist">
+                <% progress.forEach(item => { %>
+                    <li><input type="checkbox"> <%= item %></li>
+                <% }); %>
+            </ul>
+
+            <div class="resources">
+                <h3>Downloadable Resources</h3>
+                <a href="<%= resources.link %>" class="download-link" target="_blank"><%= resources.text %></a>
+            </div>
+        </section>
+
+        <!-- Social Proof -->
+        <section class="testimonials">
+            <h2>What Students Are Saying</h2>
+            <blockquote>
+                <%= testimonials.quote %> - <%= testimonials.author %>
+            </blockquote>
+        </section>
+    </main>
+
+    <!-- Footer with a link back to the homepage -->
+    <footer class="footer">
+        <a href="/index" class="cta-button">Back to Homepage</a>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

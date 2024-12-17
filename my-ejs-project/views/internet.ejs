@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet</title>
+    <link rel="stylesheet" href="/css/contentpages1.css">
+</head>
+
+<body>
+    <!-- Include Header Partial -->
+    <%- include('partials/header') %>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Internet</h1>
+        <p class="intro">Learn about the pivotal moments that transformed ARPANET into the global internet, featuring key figures like Vint Cerf and Bob Kahn.</p>
+
+        <!-- Section 1: ARPANET -->
+        <section class="content">
+            <h2>2.1 ARPANET</h2>
+            <h3>Who</h3>
+            <p>ARPANET (Advanced Research Projects Agency Network) was developed by the U.S. Department of Defense and is considered the precursor to the modern internet.</p>
+
+            <h3>What</h3>
+            <p>ARPANET was the first packet-switching network, allowing computers at different research institutions to communicate. This network laid the foundation for the internet.</p>
+
+            <h3>Why</h3>
+            <p>Its primary goal was to create a communication system that could survive disruptions and ensure resilience in case of an attack.</p>
+
+            <div class="example">
+                <h4>Example:</h4>
+                <p>Email was first used on ARPANET, revolutionizing digital communication. Explore its history <a href="https://computerhistory.org/exhibits/internet-history/" target="_blank">here</a>.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Vint Cerf & Bob Kahn -->
+        <section class="content">
+            <h2>2.2 Vint Cerf & Bob Kahn</h2>
+            <h3>Who</h3>
+            <p>Vint Cerf and Bob Kahn, known as the "fathers of the internet," co-authored TCP/IP, which became the foundation of internet communication.</p>
+
+            <h3>What</h3>
+            <p>Their development of TCP/IP allowed different networks to communicate seamlessly, forming the backbone of the internet.</p>
+
+            <div class="example">
+                <h4>Example:</h4>
+                <p>For their contributions, Cerf and Kahn received the Turing Award in 2004. Discover their story <a href="https://amturing.acm.org/award_winners/kahn_4598637.cfm" target="_blank">here</a>.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer Partial -->
+    <%- include('partials/footer', {
+        prevPage: '/preinternet',
+        prevPageLabel: 'Pre-Internet',
+        nextPage: '/web1',
+        nextPageLabel: 'Web 1.0'
+    }) %>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

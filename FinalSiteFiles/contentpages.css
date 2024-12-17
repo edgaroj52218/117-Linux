@@ -1,0 +1,281 @@
+/* Base Styles */
+:root {
+    --font-main: 'Open Sans', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+    --color-primary: #2a9d8f; /* Blue buttons */
+    --color-secondary: #264653; /* Dark blue header/footer */
+    --color-accent: #e76f51; /* Hover accent color */
+    --color-light: #f4f4f9;
+    --color-dark: #1d3557;
+    --text-dark: #333;
+    --text-light: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body spans the full height */
+}
+
+/* Header */
+header {
+    background-color: var(--color-secondary);
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1003;
+    height: 100px; /* Increased height for title alignment */
+}
+
+header h1 {
+    font-size: 1.8rem; /* Adjusted font size */
+    font-family: var(--font-heading);
+    text-align: center;
+    margin: 0 auto; /* Center the title */
+    color: var(--text-light);
+    flex-grow: 1;
+}
+
+header .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+header .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-light);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+header .hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+header .hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+header .hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Slide-out Menu */
+.menu {
+    position: fixed;
+    top: 100px; /* Adjusted for header height */
+    right: 0;
+    width: 250px;
+    height: calc(100% - 100px);
+    background-color: var(--color-dark);
+    color: var(--text-light);
+    padding: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1002;
+}
+
+.menu.active {
+    transform: translateX(0);
+}
+
+.menu a {
+    display: block;
+    margin: 1rem 0;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.menu a:hover {
+    color: var(--color-accent);
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1001;
+}
+
+.overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Main Content */
+main {
+    margin: 2rem auto;
+    padding: 0 2rem;
+    max-width: 1200px;
+    flex-grow: 1; /* Makes main content fill available space */
+}
+
+main h1 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem; /* Slightly larger title font */
+    color: var(--color-secondary);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+main p.intro {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.content h2 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.content h3 {
+    font-size: 1.4rem;
+    color: var(--color-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.content p {
+    margin-left: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.example {
+    background-color: var(--color-light);
+    border-left: 4px solid var(--color-accent);
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+/* Extras Section */
+.extras h2 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.checklist {
+    list-style: none;
+    padding: 0;
+}
+
+.checklist li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.checklist input {
+    margin-right: 0.5rem;
+}
+
+.resources {
+    margin-top: 1rem;
+}
+
+.resources a {
+    display: inline-block;
+    color: var(--color-primary);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.resources a:hover {
+    background-color: var(--color-primary);
+    color: var(--text-light);
+}
+
+/* Testimonials Section */
+.testimonials {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--color-light);
+    border-left: 4px solid var(--color-primary);
+}
+
+.testimonials h2 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+}
+
+.testimonials blockquote {
+    font-style: italic;
+    color: var(--color-dark);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-secondary);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: auto; /* Ensures footer stays at the bottom */
+    width: 100%; /* Full-width footer */
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.nav-button {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--text-light);
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-button:hover {
+    background-color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    main h1 {
+        font-size: 1.8rem; /* Adjusted for smaller screens */
+    }
+}

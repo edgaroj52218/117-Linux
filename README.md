@@ -7,11 +7,12 @@
 * Today it powers a large part of the internet, smartphones through Android, and enterprise infrastructure.
 * Linux is a key OS that every programmer should know how to use.
 
-[Common Linux Commands, Errors, and Fixes](linux.md)
-[Common Git Commands, Erros, and Fixes](git.md)
 
-History of Internet
-1. Pre-Internet
-- JC Licklider
-- Nuclear Weapons
-- ARPA (Advanced Research)
+* [Common Linux Commands, Errors, and Fixes](linux.md)
+* [Common Git Commands, Erros, and Fixes](git.md)
+
+## History of the Internet
+* [Pre-Internet](docs/preinternet.md)
+* [Internet](docs/internet.md)
+* [Web 1.0](docs/web1.md)
+* [Web 2.0](docs/web2.md)

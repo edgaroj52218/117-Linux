@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web 2.0</title>
+    <link rel="stylesheet" href="/css/contentpages1.css">
+</head>
+
+<body>
+    <!-- Include Header Partial -->
+    <%- include('partials/header') %>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Web 2.0</h1>
+        <p class="intro">Explore the key technologies and innovations that defined the Web 2.0 era, transforming how we interact with the internet today.</p>
+
+        <!-- Section 1: Google Search & PageRank -->
+        <section class="content">
+            <h2>4.1 Google Search - PageRank</h2>
+            <h3>Who</h3>
+            <p>Developed by Larry Page and Sergey Brin, Google's PageRank algorithm revolutionized search engines during the Web 2.0 era.</p>
+
+            <h3>What</h3>
+            <p>PageRank ranks web pages based on the quality of inbound links, helping users find relevant content. Learn more about how PageRank works on the <a href="https://www.google.com/search/howsearchworks/algorithms/" target="_blank">Google Search Guide</a>.</p>
+
+            <div class="example">
+                <h4>Example:</h4>
+                <p>PageRank analyzes links to determine the relevance of a webpage, allowing Google to display the most relevant results for your search.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Node.js -->
+        <section class="content">
+            <h2>4.3 Node.js</h2>
+            <h3>Who</h3>
+            <p>Ryan Dahl introduced Node.js, enabling server-side JavaScript for high-performance applications. Learn more on <a href="https://nodejs.dev/learn" target="_blank">Node.js Documentation</a>.</p>
+
+            <div class="example">
+                <h4>Example:</h4>
+                <p>Node.js powers real-time applications like chat servers and live content streaming.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer Partial -->
+    <%- include('partials/footer', {
+        prevPage: '/web1',
+        prevPageLabel: 'Web 1.0',
+        nextPage: '/webaccessibility',
+        nextPageLabel: 'Web Accessibility'
+    }) %>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

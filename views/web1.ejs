@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title> <!-- Dynamic title -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <!-- Header with Hamburger Menu -->
+    <header class="top-section">
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <!-- Slide-out Menu -->
+    <nav class="menu" id="menu">
+        <a href="/"><%= menu.home %></a> <!-- Dynamic home link -->
+        <a href="/linux"><%= menu.linuxCommands %></a> <!-- Dynamic Linux Commands link -->
+        <a href="/git"><%= menu.gitCommands %></a> <!-- Dynamic Git Commands link -->
+        <a href="/history"><%= menu.history %></a> <!-- Dynamic History link -->
+    </nav>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Main Content (F-pattern Layout) -->
+    <main>
+        <h1><%= pageTitle %></h1> <!-- Dynamic page title -->
+        <p class="intro"><%= introText %></p> <!-- Dynamic introduction text -->
+
+        <% sections.forEach(function(section) { %>
+        <!-- Section: <% section.title %> -->
+        <section class="content">
+            <h2><%= section.title %></h2>
+            <% section.subsections.forEach(function(subsection) { %>
+                <h3><%= subsection.heading %></h3>
+                <p><%= subsection.text %></p>
+            <% }); %>
+            
+            <% if (section.example) { %>
+            <div class="example">
+                <h4>Example:</h4>
+                <p>Read about the first website on the <a href="<%= section.example.link %>" target="_blank">original CERN website</a>.</p>
+            </div>
+            <% } %>
+        </section>
+        <% }); %>
+
+        <!-- Progress Tracker & Downloads -->
+        <section class="extras">
+            <h2>Track Your Progress</h2>
+            <ul class="checklist">
+                <% progressChecklist.forEach(function(item) { %>
+                    <li><input type="checkbox" <%= item.completed ? 'checked' : '' %>> <%= item.text %></li>
+                <% }); %>
+            </ul>
+
+            <div class="resources">
+                <h3>Downloadable Resources</h3>
+                <a href="<%= downloadLink %>" class="download-link" target="_blank">Download "Web History Overview" (PDF)</a>
+            </div>
+        </section>
+
+        <!-- Social Proof -->
+        <section class="testimonials">
+            <h2>What Students Are Saying</h2>
+            <blockquote>
+                "<%= testimonial %>" - <%= studentName %>, <%= studentYear %>
+            </blockquote>
+        </section>
+    </main>
+
+    <!-- Footer with a link back to the homepage -->
+    <footer class="footer">
+        <a href="/index" class="cta-button">Back to Homepage</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

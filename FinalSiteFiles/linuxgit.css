@@ -1,0 +1,220 @@
+/* Base Styles */
+:root {
+    --font-main: 'Arial', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+    --color-primary: #2a9d8f; /* Blue-Green */
+    --color-secondary: #264653; /* Dark Blue */
+    --color-accent: #e76f51; /* Red-Orange */
+    --color-light: #f4f4f9; /* Light Background */
+    --color-dark: #1d3557; /* Dark Background */
+    --table-header-bg: #2a9d8f; /* Table header background color */
+    --table-row-bg: #f9f9f9; /* Alternating row background */
+    --text-dark: #333; /* Primary text color */
+    --text-light: #fff; /* Light text color */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--color-secondary);
+    color: var(--text-light);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the title horizontally */
+    justify-content: center; /* Centers the title vertically */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+}
+
+header .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    z-index: 1002;
+}
+
+header .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-light);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hamburger Icon Transformations */
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Slide-out Menu */
+.menu {
+    position: fixed;
+    top: 95px; /* Positioned below the header */
+    right: -250px; /* Initially hidden */
+    width: 250px;
+    height: calc(100% - 60px); /* Height below the header */
+    background-color: var(--color-dark);
+    color: var(--text-light);
+    padding: 2rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+    overflow-y: auto; /* Add scroll if content exceeds height */
+}
+
+.menu.active {
+    right: 0; /* Slide in from the right */
+}
+
+.menu a {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.menu a:hover {
+    color: var(--color-accent);
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s;
+    z-index: 998;
+}
+
+.overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+main h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+    text-align: center; /* Centers the section titles */
+}
+
+main p a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+main p a:hover {
+    color: var(--color-accent);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+table thead {
+    background-color: var(--table-header-bg);
+    color: var(--text-light);
+}
+
+table th,
+table td {
+    padding: 1rem;
+    border: 1px solid var(--color-secondary);
+    text-align: left;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: var(--table-row-bg);
+}
+
+table tbody tr:nth-child(even) {
+    background-color: var(--color-light);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-secondary);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.nav-button {
+    background-color: var(--color-primary);
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.nav-button:hover {
+    background-color: var(--color-accent);
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    table th, table td {
+        font-size: 0.9rem;
+    }
+
+    .menu {
+        width: 100%;
+    }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web 1.0</title>
+    <link rel="stylesheet" href="/css/contentpages1.css">
+</head>
+
+<body>
+    <!-- Include Header Partial -->
+    <%- include('partials/header') %>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Web 1.0</h1>
+        <p class="intro">Explore the early technologies, languages, and tools that laid the foundation for the World Wide Web, starting with the creation of HTML, HTTP, and early scripting languages.</p>
+
+        <!-- Section 1: HTML / HTTP Protocol -->
+        <section class="content">
+            <h2>3.1 HTML / HTTP Protocol</h2>
+            <h3>Who</h3>
+            <p>Tim Berners-Lee, a British computer scientist, invented the World Wide Web. He developed core technologies like HTML and HTTP.</p>
+
+            <h3>What</h3>
+            <p>HTML (Hypertext Markup Language) structures web pages, while HTTP (Hypertext Transfer Protocol) facilitates communication between web browsers and servers.</p>
+
+            <h3>Why</h3>
+            <p>These technologies were created to make sharing information on the internet easier and more accessible.</p>
+
+            <h3>When</h3>
+            <p>Berners-Lee developed the first versions of HTML and HTTP between 1989 and 1990. The first website went live in 1991.</p>
+
+            <div class="example">
+                <h4>Example:</h4>
+                <p>Read about the first website on the <a href="https://info.cern.ch" target="_blank">original CERN website</a>.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: CSS -->
+        <section class="content">
+            <h2>3.3 CSS</h2>
+            <h3>Who</h3>
+            <p>Håkon Wium Lie developed CSS while working at CERN, and it was adopted as a W3C standard in 1996.</p>
+
+            <h3>What</h3>
+            <p>CSS is a style sheet language used to control the presentation of HTML documents.</p>
+
+            <h3>Why</h3>
+            <p>CSS allowed developers to separate content from design, making website maintenance easier.</p>
+
+            <div class="example">
+                <h4>Example:</h4>
+                <p>Read more on the history of CSS at the <a href="https://www.w3.org/Style/CSS/" target="_blank">W3C CSS page</a>.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer Partial -->
+    <%- include('partials/footer', {
+        prevPage: '/internet',
+        prevPageLabel: 'Internet',
+        nextPage: '/web2',
+        nextPageLabel: 'Web 2.0'
+    }) %>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

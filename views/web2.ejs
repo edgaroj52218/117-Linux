@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title> <!-- Dynamic page title -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header with Hamburger Menu -->
+    <header class="top-section">
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <!-- Slide-out Menu -->
+    <nav class="menu" id="menu">
+        <a href="/index"><%= homeLinkText %></a> <!-- Dynamic link text -->
+        <a href="/linux"><%= linuxLinkText %></a>
+        <a href="/git"><%= gitLinkText %></a>
+        <a href="/history"><%= historyLinkText %></a>
+    </nav>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Main Content (F-pattern Layout) -->
+    <main>
+        <h1><%= pageTitle %></h1> <!-- Dynamic title -->
+        <p class="intro"><%= introText %></p> <!-- Dynamic intro text -->
+
+        <!-- Section 1: Google Search & PageRank -->
+        <section class="content">
+            <h2>4.1 Google Search - PageRank</h2>
+            <h3>Who</h3>
+            <p><%= googleSearchWho %></p> <!-- Dynamic content -->
+            <h3>What</h3>
+            <p><%= googleSearchWhat %></p> <!-- Dynamic content -->
+            <div class="example">
+                <h4>Example:</h4>
+                <p><%= googleSearchExample %></p> <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Section 2: Roy Fielding & REST -->
+        <section class="content">
+            <h2>4.2 Roy Fielding and REST</h2>
+            <h3>What</h3>
+            <p><%= restWhat %></p> <!-- Dynamic content -->
+            <div class="example">
+                <h4>Example:</h4>
+                <p><%= restExample %></p> <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Section 3: Node.js & JavaScript -->
+        <section class="content">
+            <h2>4.3 Node.js - Ryan Dahl</h2>
+            <h3>Who</h3>
+            <p><%= nodeJsWho %></p> <!-- Dynamic content -->
+            <div class="example">
+                <h4>Example:</h4>
+                <p><%= nodeJsExample %></p> <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Section 4: Python & Django -->
+        <section class="content">
+            <h2>4.4 Python Guide & Django</h2>
+            <h3>What</h3>
+            <p><%= pythonDjangoWhat %></p> <!-- Dynamic content -->
+            <div class="example">
+                <h4>Example:</h4>
+                <p><%= pythonDjangoExample %></p> <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Section 5: Git & Linus Torvalds -->
+        <section class="content">
+            <h2>4.5 Git - Linus Torvalds</h2>
+            <h3>What</h3>
+            <p><%= gitWhat %></p> <!-- Dynamic content -->
+            <div class="example">
+                <h4>Example:</h4>
+                <p><%= gitExample %></p> <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Section 6: Cloud Hosting & Web 2.0 -->
+        <section class="content">
+            <h2>4.6 Cloud Hosting</h2>
+            <p><%= cloudHostingText %></p> <!-- Dynamic content -->
+        </section>
+
+        <!-- Progress Tracker & Downloads -->
+        <section class="extras">
+            <h2>Track Your Progress</h2>
+            <ul class="checklist">
+                <li><input type="checkbox" <% if (googleSearchCompleted) { %>checked<% } %> > Understand Google's PageRank algorithm</li>
+                <li><input type="checkbox" <% if (restCompleted) { %>checked<% } %> > Explore the role of REST APIs</li>
+                <li><input type="checkbox" <% if (nodeJsCompleted) { %>checked<% } %> > Learn about Node.js and its impact</li>
+            </ul>
+
+            <div class="resources">
+                <h3>Downloadable Resources</h3>
+                <a href="<%= resourceLink %>" class="download-link" target="_blank"><%= resourceText %></a>
+            </div>
+        </section>
+
+        <!-- Social Proof -->
+        <section class="testimonials">
+            <h2>What Students Are Saying</h2>
+            <blockquote>
+                "<%= studentTestimonial %>" - Web Developer, 2024
+            </blockquote>
+        </section>
+    </main>
+
+    <!-- Footer with a link back to the homepage -->
+    <footer class="footer">
+        <a href="/index" class="cta-button"><%= footerLinkText %></a> <!-- Dynamic footer text -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

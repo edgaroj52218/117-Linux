@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Accessibility & Standards Overview">
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header with Hamburger Menu -->
+    <header class="top-section">
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <!-- Slide-out Menu -->
+    <nav class="menu" id="menu">
+        <a href="index.ejs">Home</a>
+        <a href="linux.ejs">Linux Commands</a>
+        <a href="git.ejs">Git Commands</a>
+        <a href="history.ejs">Internet History</a>
+    </nav>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Main Content (F-pattern Layout) -->
+    <main>
+        <h1>Web Accessibility & Standards</h1>
+        <p class="intro">Learn how web accessibility initiatives and standards help ensure inclusivity for all users.</p>
+
+        <!-- Section 1: WAI (Web Accessibility Initiative) -->
+        <section class="content">
+            <h2>5.1 WAI (Web Accessibility Initiative)</h2>
+            <h3>Who</h3>
+            <p>Led by the W3C, the WAI works to improve web accessibility for people with disabilities.</p>
+
+            <h3>What</h3>
+            <p>WAI provides guidelines like the Web Content Accessibility Guidelines (WCAG) to ensure that websites are accessible. Explore the guidelines on the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank">W3C WAI Website</a>.</p>
+
+            <div class="example">
+                <h4>Example:</h4>
+                <p>Using <code>alt</code> attributes for images: <code>&lt;img src="example.jpg" alt="Description of the image"&gt;</code></p>
+            </div>
+        </section>
+
+        <!-- Section 2: Section 508 (U.S.) -->
+        <section class="content">
+            <h2>5.2 Section 508 (U.S.)</h2>
+            <h3>What</h3>
+            <p>A U.S. law requiring federal websites to be accessible to all citizens. Learn more about Section 508 at the <a href="https://www.section508.gov/" target="_blank">Section 508 Official Site</a>.</p>
+
+            <div class="example">
+                <h4>Example:</h4>
+                <p>Adding closed captions to a video: <code>&lt;video controls&gt;&lt;track src="captions.vtt" kind="captions" srclang="en" label="English"&gt;&lt;/video&gt;</code></p>
+            </div>
+        </section>
+
+        <!-- Section 3: ARIA (Accessible Rich Internet Applications) -->
+        <section class="content">
+            <h2>5.3 ARIA (Accessible Rich Internet Applications)</h2>
+            <h3>What</h3>
+            <p>ARIA provides additional markup to improve accessibility for dynamic web content. Read more on the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA" target="_blank">MDN ARIA Guide</a>.</p>
+
+            <div class="example">
+                <h4>Example:</h4>
+                <p>Using ARIA roles for buttons: <code>&lt;div role="button" tabindex="0" aria-pressed="false"&gt;Submit&lt;/div&gt;</code></p>
+            </div>
+        </section>
+
+        <!-- Section 4: Impact on Modern Web Design -->
+        <section class="content">
+            <h2>5.4 Impact on Modern Web Design</h2>
+            <h3>What</h3>
+            <p>Inclusive design ensures that websites are accessible to all users. Designers use WCAG guidelines to create flexible, user-friendly interfaces. Explore inclusive design practices on the <a href="https://www.a11yproject.com/" target="_blank">A11Y Project</a>.</p>
+
+            <div class="example">
+                <h4>Example:</h4>
+                <p>Responsive design for mobile and desktop: <code>@media (max-width: 768px) { body { font-size: 14px; } }</code></p>
+            </div>
+        </section>
+
+        <!-- Progress Tracker & Resources -->
+        <section class="extras">
+            <h2>Track Your Progress</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Understand WAI and WCAG guidelines</li>
+                <li><input type="checkbox"> Learn about Section 508 compliance</li>
+                <li><input type="checkbox"> Explore ARIA for dynamic content</li>
+            </ul>
+
+            <div class="resources">
+                <h3>Additional Resources</h3>
+                <a href="https://webaim.org/resources/" class="download-link" target="_blank">WebAIM Accessibility Resources</a>
+            </div>
+        </section>
+
+        <!-- Social Proof -->
+        <section class="testimonials">
+            <h2>What Students Are Saying</h2>
+            <blockquote>
+                "This guide helped me understand web accessibility and its importance!" - Accessibility Advocate, 2024
+            </blockquote>
+        </section>
+    </main>
+
+    <!-- Footer with a link back to the homepage -->
+    <footer class="footer">
+        <a href="index.ejs" class="cta-button">Back to Homepage</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

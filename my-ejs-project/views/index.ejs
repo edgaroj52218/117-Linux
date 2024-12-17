@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survival Guide for Linux and GIT</title>
+    <link rel="stylesheet" href="/css/homepage1.css">
+</head>
+
+<body>
+    <!-- Include Header Partial -->
+    <%- include('partials/header') %>
+
+    <!-- Main Content -->
+    <main>
+        <img id="HeroImage" src="/images/StarterImage.png" alt="AI-generated linux penguin in a surreal setting.">
+        <section id="welcome">
+            <h1>Welcome to the Student Survival Guide</h1>
+            <p>
+                Whether you're new to Linux and Git or looking to deepen your knowledge, you've come to the right place!
+                This guide is designed to provide step-by-step instructions, practical examples, and expert tips to help
+                you master these essential tools.
+            </p>
+            <p>
+                But that’s not all—we also delve into the rich history of the internet, tracing its evolution from the
+                early days of ARPANET to the dynamic, user-driven Web 2.0 we use today. Understanding these roots will
+                empower you to appreciate how far technology has come and prepare you for the future.
+            </p>
+        </section>
+        <section id="linuxGit">
+            <h1>Common Linux & Git Commands, Errors, and Fixes</h1>
+            <ul>
+                <li><a href="/linux">Linux</a></li>
+                <li><a href="/git">Git</a></li>
+            </ul>
+        </section>
+
+        <section id="history">
+            <h1>History of the Internet</h1>
+            <ul>
+                <li><a href="/preinternet">Pre-Internet</a></li>
+                <li><a href="/internet">Internet</a></li>
+                <li><a href="/web1">Web 1.0</a></li>
+                <li><a href="/web2">Web 2.0</a></li>
+                <li><a href="/webaccessibility">Web Accessibility & Standards</a></li>
+                <li><a href="/futureofinternet">Future of the Internet</a></li>
+            </ul>
+        </section>
+
+        <section id="Reviews">
+            <h1>Read our Stellar Reviews!</h1>
+            <div class="review">
+                <img src="/images/Reviewer1.jpg" alt="Headshot of Josh Hernandez">
+                <blockquote>
+                    "This guide is amazing and helped me understand Linux and Git quickly!"
+                </blockquote>
+                <cite>- Josh Hernandez, IT Student</cite>
+            </div>
+            <div class="review">
+                <img src="/images/Reviewer2.jpg" alt="Headshot of Nadia Goodman">
+                <blockquote>
+                    "The section on Git commands is so clear and easy to follow—it saved me so much time!"
+                </blockquote>
+                <cite>- Nadia Goodman, Software Engineer</cite>
+            </div>
+            <div class="review">
+                <img src="/images/Reviewer3.jpg" alt="Headshot of Emily Carter">
+                <blockquote>
+                    "I loved how this guide made complex topics simple. The visuals and examples were fantastic!"
+                </blockquote>
+                <cite>- Emily Carter, Web Developer</cite>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer Partial -->
+    <%- include('partials/footer') %>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
