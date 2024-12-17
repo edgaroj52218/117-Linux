@@ -5,28 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web 1.0</title>
-    <link rel="stylesheet" href="assets/contentpages.css">
+    <link rel="stylesheet" href="assets/main.css">
 </head>
 
 <body>
-    <!-- Header with Hamburger Menu -->
-    <header class="top-section">
-        <h1>Student Survival Guide for Linux & Git<br>History of the Internet</h1>
-        <div class="hamburger" id="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </header>
-
-    <!-- Slide-out Menu -->
-    <nav class="menu" id="menu">
-        <a href="index.html">Home</a>
-        <a href="contact.html">Contact</a>
-        <a href="#social-media-links">Info</a>
-        <a href="#Reviews">More</a>
-    </nav>
-    <div class="overlay" id="overlay"></div>
+    <!-- Header -->
+    <header class="top-section" id="header">
+        <a href="index.html" class="logo">
+          <img src="images/Final_SSG_Icon.png" alt="SSG Icon" id="logo-icon">
+        </a>
+        <h1 class="site-title">Student Survival Guide for Linux & Git<br>History of the Internet</h1>
+        <br>
+        <nav class="menu" id="main-menu">
+          <a href="index.html" class="menu-item">Home</a>
+          <a href="contact.html" class="menu-item">Contact</a>
+          <a href="index.html" class="menu-item">Info</a>
+          <a href="#Reviews" class="menu-item">More</a>
+        </nav>
+      </header>
 
     <!-- Main Content (F-pattern Layout) -->
     <main>
@@ -140,12 +136,52 @@
     </main>
 
     <!-- Footer with a link back to the homepage -->
-    <footer class="footer">
-        <div class ="footer-nav">
-            <a href="internet.html" class="nav-button"">Internet &larr;</a>
-            <a href="web2.html" class="nav-button">Web 2.0 &rarr;</a>
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+          <!-- Footer Links Section -->
+          <div class="footer-links">
+            <a href="index.html" class="footer-link">About Us</a>
+            <a href="index.html" class="footer-link">Careers</a>
+            <a href="index.html" class="footer-link">Contact</a>
+            <a href="index.html" class="footer-link">Privacy Policy</a>
+          </div>
+    
+          <!-- Email Signup Section -->
+          <div class="email-signup">
+            <input type="email" placeholder="Enter your email" class="email-input">
+            <button class="cta-button">Sign Up Now!</button>
+          </div>
+    
+          <!-- Social Media Section -->
+          <ul class="social-links">
+            <li class="social-item">
+              <a href="https://x.com/x" target="_blank">
+                <img src="images/X_logo.png" alt="X Logo" class="social-icon">
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="https://instagram.com/instagram" target="_blank">
+                <img src="images/IG_logo.png" alt="Instagram Logo" class="social-icon">
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="https://facebook.com/facebook" target="_blank">
+                <img src="images/Facebook_logo.png" alt="Facebook Logo" class="social-icon">
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="https://youtube.com/youtube" target="_blank">
+                <img src="images/YT_icon.png" alt="YouTube Logo" class="social-icon">
+              </a>
+            </li>
+          </ul>
         </div>
-    </footer>
+    
+        <!-- Copyright Section -->
+        <div class="footer-copyright">
+          <p>&copy; 2024 ESO. All Rights Reserved.</p>
+        </div>
+      </footer>
 
     <script src="assets/script.js"></script>
 </body>
