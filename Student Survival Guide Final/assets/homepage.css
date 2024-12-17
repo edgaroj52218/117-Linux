@@ -82,37 +82,6 @@ header .hamburger div {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Slide-out Menu */
-.menu {
-    position: fixed;
-    top: 119px; /* Start directly below the header */
-    right: -250px; /* Initially hidden off-screen */
-    width: 250px;
-    height: calc(100vh - 80px); /* Use remaining height below the header */
-    background-color: var(--color-dark);
-    color: var(--text-light);
-    padding: 2rem;
-    transition: right 0.3s ease-in-out;
-    z-index: 1001;
-    overflow-y: auto; /* Add scroll if content exceeds available height */
-}
-
-.menu.active {
-    right: 0; /* Slide in from the right */
-}
-
-.menu a {
-    display: block;
-    margin: 1rem 0;
-    color: var(--text-light);
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-.menu a:hover {
-    color: var(--color-accent);
-}
-
 /* Overlay */
 .overlay {
     position: fixed;
