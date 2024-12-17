@@ -9,119 +9,173 @@
 </head>
 
 <body>
-  <!-- Header with Hamburger Menu -->
-  <header class="top-section">
-    <a href="index.html"><img src="images/Final_SSG_Icon.png" alt="SSG Icon"></a>
-    <h1>Student Survival Guide for Linux & Git<br>History of the Internet</h1>
-    <nav class="menu" id="menu">
-      <a href="index.html">Home</a>
-      <a href="contact.html">Contact</a>
-      <a href="#social-media-links">Info</a>
-      <a href="#Reviews">More</a>
+
+  <!-- Header -->
+  <header class="top-section" id="header">
+    <a href="index.html" class="logo">
+      <img src="images/Final_SSG_Icon.png" alt="SSG Icon" id="logo-icon">
+    </a>
+    <h1 class="site-title">Student Survival Guide for Linux & Git<br>History of the Internet</h1>
+    <br>
+    <nav class="menu" id="main-menu">
+      <a href="index.html" class="menu-item">Home</a>
+      <a href="contact.html" class="menu-item">Contact</a>
+      <a href="index.html" class="menu-item">Info</a>
+      <a href="#Reviews" class="menu-item">More</a>
     </nav>
   </header>
 
-
-  <!-- Overlay -->
-  <div class="overlay" id="overlay"></div>
-
   <!-- Main Content -->
-  <main>
+  <main id="main-content">
+
     <!-- Welcome Section -->
-    <img id="HeroImage" src="images/StarterImage.png" alt="AI-generated linux penguin in a surreal setting.">
-    <section id="welcome">
-      <h1>Welcome to the Student Survival Guide</h1>
-      <p>
-        Whether you're new to Linux and Git or looking to deepen your knowledge, you've come to the right place! This guide is designed 
-        to provide step-by-step instructions, practical examples, and expert tips to help you master these essential tools. 
+    <section id="welcome-section" class="welcome">
+      <img src="images/ssgheroimage.jpg" alt="Hero Image" id="heroimage">
+      <h1 class="section-title">Welcome to the Student Survival Guide</h1>
+      <p class="welcome-text">
+        Whether you're new to Linux and Git or looking to deepen your knowledge, you've come to the right place! This
+        guide is designed
+        to provide step-by-step instructions, practical examples, and expert tips to help you master these essential
+        tools.
+        But that’s not all—we also delve into the rich history of the internet, tracing its evolution from the early
+        days of ARPANET
+        to the dynamic, user-driven Web 2.0 we use today. Understanding these roots will empower you to appreciate how
+        far technology
+        has come and prepare you for the future. <br>
+        What are you waiting for?! Subscribe today!
       </p>
-      <p>
-        But that’s not all—we also delve into the rich history of the internet, tracing its evolution from the early days of ARPANET 
-        to the dynamic, user-driven Web 2.0 we use today. Understanding these roots will empower you to appreciate how far technology 
-        has come and prepare you for the future.
-      </p>
+      <button class="cta-button">Become a Member!</button>
     </section>
-    <section id="linuxGit">
-      <h1>Common Linux & Git Commands, Errors, and Fixes</h1>
-      <ul>
-        <li><a href="linux.html">Linux</a></li>
-        <li><a href="git.html">Git</a></li>
+
+    <section id="history-section" class="history">
+      <h1 class="section-title">Common Linux & Git Commands, Errors, and Fixes</h1>
+      <p class="section-description">
+        Mastering Linux and Git is essential for navigating modern technology environments. Linux, with its powerful
+        command-line interface,
+        provides unparalleled flexibility and control, while Git enables efficient collaboration and version control for
+        projects of any size.
+        This section covers commonly used commands, troubleshooting tips, and fixes for errors that developers and IT
+        professionals encounter daily.
+      </p>
+      <h4>Forgot a Git command or an unknown error appeared for Linux? See how you can resolve it &darr;</h4><br>
+      <ul class="linux-git-list">
+        <li><a href="linux.html" class="linux-link">Linux Crash Course</a></li>
+        <li><a href="git.html" class="git-link">Git Crash Course</a></li>
       </ul>
     </section>
 
-    <section id="history">
-      <h1>History of the Internet</h1>
-      <ul>
-        <li><a href="preinternet.html">Pre-Internet</a></li>
-        <li><a href="internet.html">Internet</a></li>
-        <li><a href="web1.html">Web 1.0</a></li>
-        <li><a href="web2.html">Web 2.0</a></li>
-        <li><a href="webaccessibility.html">Web Accessibility & Standards</a></li>
-        <li><a href="futureofinternet.html">Future of the Internet</a></li>
+    <section id="history-section" class="history">
+      <h1 class="section-title">History of the Internet</h1>
+      <p class="section-description">
+        The history of the internet is a fascinating journey that showcases humanity's quest for connection and
+        innovation. From the early days of ARPANET,
+        laying the groundwork for global communication, to the evolution of Web 1.0's static pages and Web 2.0's
+        dynamic, user-driven experiences,
+        each phase has revolutionized how we interact with information and each other. Explore key milestones, including
+        the pre-internet era, accessibility
+        standards, and a glimpse into the exciting possibilities for the internet's future.
+      </p>
+      <h4>Learn about our wild history below &darr;</h4><br>
+      <ul class="linux-git-list">
+        <li><a href="preinternet.html" class="history-link">Pre-Internet</a></li>
+        <li><a href="internet.html" class="history-link">Internet</a></li>
+        <li><a href="web1.html" class="history-link">Web 1.0</a></li>
+        <li><a href="web2.html" class="history-link">Web 2.0</a></li>
+        <li><a href="webaccessibility.html" class="history-link">Web Accessibility & Standards</a></li>
+        <li><a href="futureofinternet.html" class="history-link">Future of the Internet</a></li>
       </ul>
     </section>
 
-    <section id="Reviews">
-      <h1>Read our Stellar Reviews!</h1>
-      <div class="review">
-        <img src="images/Reviewer1.jpg" alt="Headshot of Josh Hernandez">
-        <blockquote>
+    <section id="reviews-section" class="reviews">
+      <h1 class="section-title">Read our Stellar Reviews!</h1>
+      <div class="review-item">
+        <img src="images/Reviewer1.jpg" alt="Headshot of Josh Hernandez" class="review-image">
+        <blockquote class="review-quote">
           "This guide is amazing and helped me understand Linux and Git quickly!"
         </blockquote>
-        <cite>- Josh Hernandez, IT Student</cite>
+        <cite class="review-author">- Josh Hernandez, IT Student</cite>
       </div>
 
-      <div class="review">
-        <img src="images/Reviewer2.jpg" alt="Headshot of Nadia Goodman">
-        <blockquote>
+      <div class="review-item">
+        <img src="images/Reviewer2.jpg" alt="Headshot of Nadia Goodman" class="review-image">
+        <blockquote class="review-quote">
           "The section on Git commands is so clear and easy to follow—it saved me so much time!"
         </blockquote>
-        <cite>- Nadia Goodman, Software Engineer</cite>
+        <cite class="review-author">- Nadia Goodman, Software Engineer</cite>
       </div>
 
-      <div class="review">
-        <img src="images/Reviewer3.jpg" alt="Headshot of Emily Carter">
-        <blockquote>
+      <div class="review-item">
+        <img src="images/Reviewer3.jpg" alt="Headshot of Emily Carter" class="review-image">
+        <blockquote class="review-quote">
           "I loved how this guide made complex topics simple. The visuals and examples were fantastic!"
         </blockquote>
-        <cite>- Emily Carter, Web Developer</cite>
+        <cite class="review-author">- Emily Carter, Web Developer</cite>
       </div>
 
-      <div class="review">
-        <img src="images/Reviewer4.jpg" alt="Headshot of Mike Johnson">
-        <blockquote>
+      <div class="review-item">
+        <img src="images/Reviewer4.jpg" alt="Headshot of Mike Johnson" class="review-image">
+        <blockquote class="review-quote">
           "The history section provided a fascinating look into the origins of the internet. I learned so much!"
         </blockquote>
-        <cite>- Mike Johnson, Network Engineer</cite>
+        <cite class="review-author">- Mike Johnson, Network Engineer</cite>
       </div>
 
-      <div class="review">
-        <img src="images/Reviewer5.jpg" alt="Headshot of Sarah Lee">
-        <blockquote>
+      <div class="review-item">
+        <img src="images/Reviewer5.jpg" alt="Headshot of Sarah Lee" class="review-image">
+        <blockquote class="review-quote">
           "Understanding the evolution from Web 1.0 to Web 2.0 was eye-opening. This guide is invaluable!"
         </blockquote>
-        <cite>- Sarah Lee, History Enthusiast</cite>
+        <cite class="review-author">- Sarah Lee, History Enthusiast</cite>
       </div>
     </section>
   </main>
 
-  <footer class="footer" id="social-media-links">
-    <ul class="social-links">
-      <li><a href="https://x.com/x" target="_blank">
-        <img src="images/X_logo.png" alt="X Logo">
-      </a></li>
-      <li><a href="https://instagram.com/instagram" target="_blank">
-        <img src="images/IG_logo.png" alt="Instagram Logo">
-      </a></li>
-      <li><a href="https://facebook.com/facebook" target="_blank">
-        <img src="images/Facebook_logo.png" alt="Facebook Logo">
-      </a></li>
-      <li><a href="https://youtube.com/youtube" target="_blank">
-        <img src="images/YT_icon.png" alt="YouTube Logo">
-      </a></li>
-    </ul>
-  </footer>
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <!-- Footer Links Section -->
+      <div class="footer-links">
+        <a href="index.html" class="footer-link">About Us</a>
+        <a href="index.html" class="footer-link">Careers</a>
+        <a href="index.html" class="footer-link">Contact</a>
+        <a href="index.html" class="footer-link">Privacy Policy</a>
+      </div>
 
+      <!-- Email Signup Section -->
+      <div class="email-signup">
+        <input type="email" placeholder="Enter your email" class="email-input">
+        <button class="cta-button">Sign Up Now!</button>
+      </div>
+
+      <!-- Social Media Section -->
+      <ul class="social-links">
+        <li class="social-item">
+          <a href="https://x.com/x" target="_blank">
+            <img src="images/X_logo.png" alt="X Logo" class="social-icon">
+          </a>
+        </li>
+        <li class="social-item">
+          <a href="https://instagram.com/instagram" target="_blank">
+            <img src="images/IG_logo.png" alt="Instagram Logo" class="social-icon">
+          </a>
+        </li>
+        <li class="social-item">
+          <a href="https://facebook.com/facebook" target="_blank">
+            <img src="images/Facebook_logo.png" alt="Facebook Logo" class="social-icon">
+          </a>
+        </li>
+        <li class="social-item">
+          <a href="https://youtube.com/youtube" target="_blank">
+            <img src="images/YT_icon.png" alt="YouTube Logo" class="social-icon">
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="footer-copyright">
+      <p>&copy; 2024 ESO. All Rights Reserved.</p>
+    </div>
+  </footer>
   <script src="assets/script.js"></script>
 </body>
 
